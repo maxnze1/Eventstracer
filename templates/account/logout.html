@@ -1,0 +1,43 @@
+{% extends "pages/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
+{% block content %}
+
+
+<div class="section-block-parallax jarallax" data-jarallax data-speed="0.6">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Form Column Start -->
+      <div class="col-md-6 col-sm-12 col-12 wow fadeIn animated mx-auto" data-wow-delay=".3s" data-wow-duration="1.5s">
+        <div class="contact-form-md white-background shadow-light">
+          <h3>{% trans "Sign Out" %}</h3>
+
+          <p>{% trans 'Are you sure you want to sign out?' %}</p>
+          <!-- Form Start -->
+          <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button type="submit">{% trans 'Sign Out' %}</button>
+          </form>
+
+          <!-- Form End -->
+        </div>
+      </div>
+      <!-- Contact Form Column End -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

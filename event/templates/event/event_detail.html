@@ -1,0 +1,81 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block head %}
+<style>
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% include 'event/event_detail_comp.html' %}
+
+
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+    $(document).ready(function () {
+        $("#pay").on('click', function () {
+            payWithPaystack();
+        });
+        var payment = "{{ event.amount }}" + "00";
+        function payWithPaystack() {
+            var handler = PaystackPop.setup({
+                key: 'pk_test_75454c82f2af7bd22ec3ed8b1060b52770aa9f7c',
+                email: '{{ request.user.email }}',
+                amount: parseInt(payment),
+                currency: "NGN",
+                ref: '' + "{{ reference }}",
+	metadata: {
+            custom_fields: [
+                {
+                    display_name: "Payment For",
+                    variable_name: "payment_for",
+                    value: "event ticket for " + "{{ event.title }}"
+                }
+            ]
+        },
+        callback: function (response) {
+            console.log(response);
+            if (response.status === "success") {
+                $("#submit").click()
+            } else {
+                alert('Error. Payment failed', response)
+            }
+            alert('success. transaction ref is ' + response.reference);
+        },
+        onClose: function () {
+            location.reload();
+        }
+    });
+    handler.openIframe();
+            }
+        });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEtywbh0b6n4-jHcPWpdXYedd3JnockrY&callback=initMap" async
+    defer></script>
+<script>
+    function initMap() {
+        var map;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {{ address_cords| safe }},
+    zoom: 15
+    });
+    // The marker, positioned at cords
+    var marker = new google.maps.Marker({ position: {{ address_cords| safe }}, map: map});
+}
+</script>
+{% endblock %}

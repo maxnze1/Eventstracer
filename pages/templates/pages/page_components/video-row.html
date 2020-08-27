@@ -1,0 +1,36 @@
+<div class="section-block">
+    <div class="container">
+        <div class="center-holder mb-20">
+             <h2 class="Inder"><span class="black ">Top </span><span class="primary-color">Videos</span></h2>
+        </div>
+
+        <div class="row">
+            {% for item in topvideos %}
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="video-video-box full-width mt-50">
+                    <img src="{{ item.video_image.url }}" class="extra-rounded-border shadow-primary" alt="img">
+                    <h5 class="text-center mt-10">{{ item.title}}</h5>
+                    <div class="video-video-box-overlay">
+                        <div class="video-video-box-button-xs">
+                            <button class="video-video-play-icon" data-izimodal-open="#video1">
+                                <i class="fa fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Start -->
+                <div class="izimodal" id="video1" data-iziModal-width="800px" data-iziModal-fullscreen="true">
+                    <video width="800" height="450" controls controlsList="nodownload" webkitallowfullscreen
+                        mozallowfullscreen allowfullscreen>
+                        <source src="{{ item.video}}" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Modal End -->
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+{% load ratings %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-12">
+                {% for item in qs %}
+                <div class="blog-news">
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-4">
+                            <div class="blog-news-left-img">
+                                <img src="{{ item.company_logo.url}}" alt="img">
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-7 col-4">
+                            <div class="blog-news-left-text">
+
+                                <h4><a href="{{ item.get_absolute_url }}">{{ item.business_name}}</a></h4>
+                                <p>{{ item.track_record|safe|truncatewords:12|linebreaks}}</p>
+                                <p><a href="#">Read More</a></p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-7 col-4">
+                            <div class="blog-news-left-text">
+                                <ul class="primary-list">
+                                    <li><i class="fas fa-map-marker-alt"></i> {{ item.state}}</li>
+                                    <li><i class="fas fa-mobile-alt"></i> {{ item.phone_number}}</li>
+                                    <li><i class="fas fa-envelope"></i> {{ item.email}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 mt-100">
+            <div class="blog-post-right">
+                <h5 class="semi-bold">Categories</h5>
+                <ul>
+                    <li{% if not categories %} class="selected" {% endif %}>
+                        <a href="{% url 'directory:directory' %}">All</a>
+                        </li>
+                        {% for c in categories %}
+                        <li {% if category.slug == c.slug %} class="selected" {% endif %}>
+                            <a href="{{ c.get_absolute_url}}">{{c.name}}</a>
+                        </li>
+                        {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

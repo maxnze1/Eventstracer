@@ -1,0 +1,32 @@
+{% extends 'pages/base.html' %}
+{% load bootstrap %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% block content %}
+<div class="section-block-parallax jarallax" data-jarallax data-speed="0.6">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form Column Start -->
+            <div class="col-md-6 col-sm-12 col-12 wow fadeIn animated mx-auto" data-wow-delay=".3s"
+                data-wow-duration="1.5s">
+                <div class="contact-form-md white-background  shadow-light">
+                    <h5 class="center-holder">Create An Account</h5>
+                    <!-- Form Start -->
+                    <form method="post" action="#" class="mt-30">
+                        {% csrf_token %}
+                        {{ form|bootstrap }}
+                        <button type="submit" class="primary-button button-sm">Sign Up</button>
+                        <small>Already have account? <a class="pink-red" href="{% url 'account_login' %}">login.
+                            </a></small>
+                    </form>
+                    <!-- Form End -->
+                    <!-- <a href="{% provider_login_url "facebook" method="oauth2" %}" class="button-primary">Facebook</a> -->
+                </div>
+            </div>
+            <!-- Contact Form Column End -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

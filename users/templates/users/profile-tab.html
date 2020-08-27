@@ -1,0 +1,93 @@
+{% load crispy_forms_tags %}
+{% load extra_tags %}
+
+<!-- Tabs Start -->
+<div class="default-tabs">
+    <div class='tabs tabs_animate mt-20'>
+        <ul class="tab-menu left-holder">
+            <li><a href="#tab-1">Profile</a></li>
+            <li><a href="#tab-2">SME Circuit</a></li>
+            <li><a href="#tab-3">Tickets</a></li>
+            <li><a href="#tab-4">Events</a></li>
+        </ul>
+
+        <!-- Tab 1 Start -->
+        <div id='tab-1' class="clearfix tab-body inner-30">
+            <form method="POST" enctype="multipart/form-data">
+                <fieldset class="form-group">
+                    {% csrf_token %}
+                    {{ user_form|crispy }}
+                    {{ profile_form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+        <!-- Tab 1 End -->
+
+        <!-- Tab 2 Start -->
+        <div id='tab-2' class="clearfix tab-body inner-30">
+            Circuit registered for <br>
+            <ul>
+                {% for sme in smes %}
+                <li>{{ sme }} <a style="color: blue" href="{{ sme.pdf.url }}">Download Form</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- Tab 2 End -->
+
+        <!-- Tab 3 Start -->
+        <div id='tab-3' class="clearfix tab-body inner-30">
+            {% for ticket in tickets %}
+            <div class="mt-20">
+                {{ ticket.title.title }}<br>
+                <img src="{{ ticket.title.image.url }}" width="30%"><br>
+                <a href="{{ ticket.ticket.url }}" class="primary-button button-sm">Download Ticket</a>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Tab 3 End -->
+        <!-- Tab 3 Start -->
+        <div id='tab-4' class="clearfix tab-body inner-30">
+            {% for event in events %}
+            <div class="mt-20">
+                {{ event }} | <button class="link" data-izimodal-open="#modal{{ forloop.counter0 }}">
+                    view Info
+                </button>
+                <!-- Modal Start -->
+                <div class="izimodal" id="modal{{ forloop.counter0 }}" data-iziModal-width="400px"
+                    data-iziModal-fullscreen="true" data-iziModal-transitionIn="comingIn">
+                    <!-- Close Button Start -->
+                    <div class="close-modal">
+                        <button class="close-modal" data-izimodal-close><i class="ti-close"></i></button>
+                    </div>
+                    <!-- Close Button Start -->
+                    <!-- Modal Body Start -->
+                    <div class="modal-inside inner-30 center-holder">
+                        <div class="modal-heading">
+                            <h4>{{ event }}</h4>
+                        </div>
+
+                        <ul>
+                            <li>Interested: {{ event.interest.all.count }}</li>
+                            <li>Attending: {{ event.attending.all.count }}</li>
+                        </ul>
+
+                        <p>List of emails of interested and attending users</p>
+                        <a style="color: white" href="{% url 'users:interested' event.slug %}"
+                            class="primary-button button-sm">Download Interested CSV</a>
+                        <a style="color: white" href="{% url 'users:attending' event.slug %}"
+                            class="primary-button button-sm">Download Attending CSV</a>
+
+                    </div>
+                    <!-- Modal Body End -->
+                </div>
+                <!-- Modal End -->
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Tab 3 End -->
+    </div>
+</div>
+<!-- Tabs End -->

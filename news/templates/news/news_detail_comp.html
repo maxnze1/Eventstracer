@@ -1,0 +1,67 @@
+{% load static %}
+
+<!-- Blog Post START -->
+<div>
+    <div class="container">
+        <div class="row">
+            <!-- Left Side START -->
+            <div class="col-md-8 col-sm-12 col-xs-12 mt-20">
+                <div class="blog-post">
+                    {% load thumbnail %}
+                    {% thumbnail news_item.image "800x400" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                    {% endthumbnail %}
+
+
+                    <ul class="blog-post-info">
+                        <h2 class="mt-10 mb-10">{{news_item.title}}</h2>
+                        <!-- <li><i class="far fa-user"></i><span>Admin</span></li> -->
+                        <li><i class="far fa-calendar-alt"></i><span>{{ news_item.created|date:"F d, Y"}}</span></li>
+                    </ul>
+                    <p>{{ news_item.body|safe}}</p>
+
+                </div>
+
+            </div>
+            <!-- Left Side END -->
+
+            <!-- Right Side START -->
+            <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+                <div class="blog-post-right">
+
+                    <div class="recent-post  mt-30">
+                        <h4>Related News</h4>
+                        <div class="recent-post-info">
+                            {% for sim_news_item in similar_news %}
+                            <div class="row mb-40">
+
+                                <div class="col-md-4 col-sm-4 col-12 pr-0">
+                                    <img src="{{sim_news_item.image.url}}" alt="img">
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-12">
+                                    <h3><a href="{{sim_news_item.get_absolute_url}}">{{ sim_news_item.title}}</a></h3>
+                                    <h6>{{ sim_news_item.created}}</h6>
+                                </div>
+
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                        <h4>Share</h4>
+                        <div class="blog-post-follow mt-20">
+                            <ul>
+                                <li class="social-facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                <li class="social-youtube"><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                                <li class="social-twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                                <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest-square"></i></a>
+                                </li>
+                                <li class="social-behance"><a href="#"><i class="fab fa-behance-square"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Side END -->
+            </div>
+        </div>
+    </div>
+    <!-- Blog Post END -->

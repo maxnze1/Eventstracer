@@ -1,0 +1,44 @@
+{% extends 'pages/base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form Column Start -->
+            <div class="col-md-12 col-sm-12 col-12 wow fadeIn animated mx-auto" data-wow-delay=".3s"
+                data-wow-duration="1.5s">
+                <div class="contact-form-md white-background">
+                    <h5 class="center-holder">Thank You</h5>
+                    <ul class="default-links">
+                        <li>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }} | Thank You</li>
+                    </ul>
+                    <!-- Form Start -->
+                    <form method="post" action="#" class="mt-30">
+                        {% csrf_token %}
+                        {{ wizard.management_form }}
+                        <label class="control-label" for="terms">Terms & Conditions:</label>
+                        <textarea style="height: 182px" id="terms" disabled
+                            class="form-control is-invalid col-sm-7">Due to the limited availability of exhibition spaces at the exhibition venue, a ratings based general business pre-evaluation phase is required to determine the level of development that your business has attained and reveal areas where further development is required. There is a non-refundable pre-evaluation fee of N1,000 (one thousand Naria only) payable only if you want to submit your evaluation after assessing how well your responses to the questions will probably fare. Applicants with successful ratings will be advised to proceed to register for their preferred Circuit event(s). Selection of the final</textarea>
+                        <div class="checkbox"><input type="checkbox" id="checkbox_1" required> <label
+                                for="checkbox_1">By
+                                clicking this box, you agree to the terms and conditions</label></div>
+                        <br><br>
+                        {% if wizard.steps.prev %}
+                        <button formnovalidate="formnovalidate" class="primary-button button-sm" name="wizard_goto_step"
+                            type="submit" value="{{ wizard.steps.first }}"> First
+                        </button>
+                        <button formnovalidate="formnovalidate" class="primary-button button-sm" name="wizard_goto_step"
+                            type="submit" value="{{ wizard.steps.prev }}"> Prev
+                        </button>
+                        {% endif %}
+                        <button type="submit" class="primary-button button-sm">Proceed</button>
+                    </form>
+                </div>
+                <!-- Contact Form Column End -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

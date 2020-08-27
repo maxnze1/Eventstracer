@@ -1,0 +1,29 @@
+{% extends "pages/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Up Closed" %}{% endblock %}
+
+{% block content %}
+
+
+<div class="section-block-parallax jarallax" data-jarallax data-speed="0.6">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form Column Start -->
+            <div class="col-md-6 col-sm-12 col-12 wow fadeIn animated mx-auto" data-wow-delay=".3s"
+                data-wow-duration="1.5s">
+                <div class="contact-form-md white-background  shadow-light">
+                    <h5 class="center-holder">{% trans "Sign Up Closed" %}</h5>
+                    <!-- Form Start -->
+                    <p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+                    <!-- Form End -->
+                    <!-- <a href="{% provider_login_url "facebook" method="oauth2" %}" class="button-primary">Facebook</a> -->
+                </div>
+            </div>
+            <!-- Contact Form Column End -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

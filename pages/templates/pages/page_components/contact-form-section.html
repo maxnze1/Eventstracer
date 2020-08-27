@@ -1,0 +1,48 @@
+{% for item in contact %}
+<div class="section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6"
+    style="background-image: url('{{ img.url }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="section-heading white-color left-holder wow fadeIn animated" data-wow-delay=".1s">
+                    <h2 class="semi-bold">{{ item.title }}</h2>
+                    <div class="section-heading-line"></div>
+                </div>
+
+                <!-- Contact icons Start -->
+                <div class="mt-0">
+                    <div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
+                        <i class="icon-question"></i>
+                        <h4>Direct line numbers</h4>
+                        <h5>{{ item.phone}}</h5>
+                    </div>
+
+                    <!-- <div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".2s" data-wow-duration="1.5s">
+                        <i class="icon-earth-globe"></i>
+                        <h4>Our Locations</h4>
+                        <h5>49, Rafiu Williams Crescent, Masha, Surulere</h5>
+                    </div> -->
+
+                    <div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".3s" data-wow-duration="1.5s">
+                        <i class="icon-email"></i>
+                        <h4>Our Email</h4>
+                        <h5>{{ item.email}}</h5>
+                    </div>
+                </div>
+                <!-- Contact icons End -->
+            </div>
+
+            <!-- Contact Form Column Start -->
+            <div class="col-md-5 col-sm-12 col-12 offset-md-1 wow fadeIn animated" data-wow-delay=".3s"
+                data-wow-duration="1.5s">
+                <div>
+
+                    {% include 'pages/page_components/contact-modal.html' %}
+                </div>
+            </div>
+            <!-- Contact Form Column End -->
+        </div>
+    </div>
+</div>
+
+{% endfor %}

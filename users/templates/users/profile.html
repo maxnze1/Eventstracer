@@ -1,0 +1,46 @@
+{% extends 'pages/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 mt-20 mb-20">
+            <div class="text-center">
+                <img src="{{ user.profile.profile_image.url }}" class="avatar img-circle img-thumbnail" alt="avatar">
+            </div>
+            </hr><br>
+            <div>
+                <!-- 
+            </div>
+            <p>{{ user.email }}</p>
+            <ul class="list-group">
+                <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 125
+                </li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Following</strong></span> 37</li>
+            </ul> -->
+                <!-- 
+            <div class="panel panel-default">
+                <div class="panel-heading">Social Media</div>
+                <div class="panel-body">
+                    <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i
+                        class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i
+                        class="fa fa-google-plus fa-2x"></i>
+                </div>
+            </div> -->
+
+            </div>
+            <!--/col-3-->
+        </div>
+        <div class="col-sm-9">
+            <div class="container mt-20 mb-20">
+                <h4 class="pl-50">{{user.username}} Profile</h4>
+                {% include 'users/profile-tab.html' %}
+            </div>
+        </div>
+        <!--/tab-content-->
+
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,50 @@
+{% extends "pages/base.html" %}
+
+{% load i18n %}
+{% load account %}
+
+{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+
+
+{% block content %}
+
+<div class="section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form Column Start -->
+            <div class="col-md-6 col-sm-12 col-12 wow fadeIn animated mx-auto" data-wow-delay=".3s"
+                data-wow-duration="1.5s">
+                <div class="contact-form-md white-background">
+                    <h5 class="center-holder">{% trans "Confirm E-mail Address" %}</h5>
+                    <!-- Form Start -->
+                    {% if confirmation %}
+
+                    {% user_display confirmation.email_address.user as user_display %}
+
+                    <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a
+                            href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user
+                        {{ user_display }}.{% endblocktrans %}</p>
+
+                    <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                        {% csrf_token %}
+                        <button type="submit">{% trans 'Confirm' %}</button>
+                    </form>
+
+                    {% else %}
+
+                    {% url 'account_email' as email_url %}
+
+                    <p>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a
+                            href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
+
+                    {% endif %}
+                    <!-- Form End -->
+                </div>
+            </div>
+            <!-- Contact Form Column End -->
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load flatpages %}
+{% block content %}
+<div class="main-image-section black-overlay-10" style="background-image:url({% static 'img/promobg1.jpg' %});">
+    <div class="main-image-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-12 mt-50">
+                    <img class="mb-30" src="{% static 'img/promotext1.png' %}" />
+                    <img class="mb-50" src="{% static 'img/promotext3.png' %}" />
+                    <div> <img class="mb-25" src="{% static 'img/date.png' %}" /></div>
+                    <div>
+                        <img class="mb-25" src="{% static 'img/promotext4.png' %}" />
+                    </div>
+                    {% include 'flatpages/popup.html' %}
+                </div>
+                <div class="col-md-6 col-sm-6 col-12">
+
+                </div>
+            </div>
+            <div class="mt-100">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="collapse navbar-collapse" id="menu">
+    {% get_flatpages as flatpages %}
+    <ul class="nav navbar-nav">
+        {% for page in flatpages %}
+        <li><a href="/pages{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="container">
+
+</div>
+{% endblock content %}

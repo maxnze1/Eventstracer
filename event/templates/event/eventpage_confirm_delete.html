@@ -1,0 +1,36 @@
+{% extends 'pages/base.html '%}
+{% load static %}
+
+{% block content %}
+
+<div class="section-block-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-8 offset-2">
+                <div class="section-heading center-holder">
+                    <h3 class="semi-bold">Delete Event</h3>
+                    <div class="section-heading-line"></div>
+                </div>
+
+                <div class="text-content-big">
+                    <div class="event-form-md white-background shadow-light">
+                        <h2>Do you really want want to delete {{ object.title}}</h2>
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <button class="btn btn-outline-danger" type="submit">Yes, delete</button>
+                            <a href="{{ object.get_absolute_url }}" class="btn btn-outline-primary"
+                                role="button">Cancel</a>
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

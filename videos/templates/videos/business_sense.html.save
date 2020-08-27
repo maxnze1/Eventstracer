@@ -1,0 +1,32 @@
+<!-- Video Boxes Section START -->
+<div class="section-block pt-0 pb-0">
+    <div class="container">
+        <div class="small-heading center-holder mt-80 mb-40">
+            <span class="uppercase">Business Sense</span>
+        </div>
+
+        <div class="owl-carousel owl-theme customizable-carousel mb-75" data-loop="true" data-items="4"
+            data-md-items="4" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="false"
+            data-autospeed="3500" data-nav-dots="false" data-nav-arrows="true">
+            {% for item in business_sense %}
+            <div class="item">
+                <div class="video-video-box full-width mt-20">
+                    <img src="{{ item.video_image.url}}" class="extra-rounded-border shadow-primary" alt="img">
+                    <div class="video-video-box-overlay">
+                        <div class="video-video-box-button-xs">
+                            <button class="video-video-play-icon" data-izimodal-open="#video1">
+                                <i class="fa fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Start -->
+                <div class="izimodal" id="video1" data-iziModal-width="800px" data-iziModal-fullscreen="true">
+                    <iframe height="415" src="{{ item.video_url}}" class="full-width shadow-primary"></iframe>
+                </div>
+                <!-- Modal End -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

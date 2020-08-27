@@ -1,0 +1,193 @@
+<!-- Blog Grid Section START -->
+{% load events_tags %}
+{% load static %}
+{% load crispy_forms_tags %}
+<div>
+    <div class="container">
+        <div class=" center-holder mt-20 mb-40">
+            <h2 class="Inder"><span class="black ">Events around the world</span> </h2>
+            <div class="section-heading-line"></div>
+            <div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="search" placeholder="Search"
+                                        name="search" />
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="location" name="location"
+                                        placeholder="Location" />
+                                </div>
+
+                            </div>
+                    </div>
+                    </form>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form method="GET">
+                                    <div class="row">
+
+                                        <div class="col-md-5"><select id="datesearch" class="form-control"
+                                                name="datesearch">
+                                                <option selected>Category Search</option>
+                                                <option value="{{ events.week_search }}">Category 1</option>
+                                            </select></div>
+                                        <div class="col-md-5">
+                                            <select id="datesearch" class="form-control" name="category">
+                                                <option selected>Category Search</option>
+                                                <option value="{{ events.category }}">Category 1</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2"> <button type="submit"
+                                                class="button-sm primary-button semi-rounded full-width search">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- <div class="row">
+                    <div class="col-md-12 col-sm-6">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12">
+                                <input type="text" class="form-control" id="search" name="search" />
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <form method="GET">
+                                    {% csrf_token %}
+                                    <input type="text" class="form-control" id="location" />
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <select id="datesearch" class="form-control" name="datesearch">
+                                    <option selected>Category Search</option>
+                                    <option value="{{ events.week_search }}">Category 1</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <select id="datesearch" class="form-control" name="datesearch">
+                                    <option selected>Date Search...</option>
+                                    <option value="{{ events.week_search }}"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1 col-sm-6">
+                        <button type="submit"
+                            class="button-sm primary-button semi-rounded full-width search">Search</button>
+                    </div>
+                    </form>
+
+                </div> -->
+            </div>
+            <ul id="search_display"></ul>
+            <ul id="location_display"></ul>
+        </div>
+        <div class=" center-holder mt-20 mb-40">
+            {% if tag %}
+            <h3>{{tag.name}} Events</h3>
+            {% endif %}
+
+        </div>
+        <div class="row">
+            {% for evt in events %}
+            <div class="col-md-3 col-sm-6 col-12 wow fadeIn animated" data-wow-delay=".1s">
+
+                <div class="blog-grid-3">
+                    {% if evt.featured %}
+                    <div class="f-badge"><img src="{% static 'img/featured_badge.png' %}" /></div>
+                    {% endif %}
+                    <div class="blog-grid-3-img">
+                        {% load thumbnail %}
+                        {% thumbnail evt.image "400x200" crop="center" as im %}
+                        <a href="{{ evt.get_absolute_url }}">
+                            <img src="{{ im.url }}" width="{{ im.width }}" height="im.height">
+                        </a>
+                        {% endthumbnail %}
+                    </div>
+                    <div class="blog-grid-3-text">
+                        <h4><a href="{{ evt.get_absolute_url }}">{{ evt.title|truncatewords:3|linebreaks}}</a></h4>
+                        <ul>
+                            <li><i class="fa fa-calendar"></i>{{ evt.start_date|date:"F d, Y"}}</li>
+                            <li><i class="fas fa-user"></i>By admin</li>
+                        </ul>
+                        {{ evt.address|truncatewords:6|linebreaks}}
+                        <div class="blog-grid-3-button left-holder">
+                            {% for tag in evt.tags.all %}
+                            <a href="{% url 'events:events_by_tags' tag.slug %}">{{ tag.name}} <i class=""></i></a>
+                            {% if not forloop.last %}, {% endif %}
+                            {% endfor%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="container center-holder mb-30">
+            <div class="">
+                {% if is_paginated %}
+                {% if page_obj.has_previous %}
+                <a class="grey-button button-pagination semi-rounded" href="?{% param_replace page=1 %}">First</a>
+                {% if page_obj.previous_page_number != 1 %}
+                <a class="grey-button-bordered button-pagination semi-rounded"
+                    href="?{% param_replace page=page_obj.previous_page_number %}">Previous</a>
+                {% endif %}
+                {% endif %}
+
+                {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                <a href="?{% param_replace page=page_obj.num  %}"
+                    class="primary-button button-pagination semi-rounded">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-3' and num  < page_obj.number|add:'3' %}
+                <a href="?page={{ num }}" class="grey-button-bordered button-pagination semi-rounded">{{ num }}</a>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                {% if page_obj.next_page_number != paginator.num_pages %}
+                <a class="grey-button button-pagination semi-rounded"
+                    href="?{% param_replace page=page_obj.next_page_number %}">Next</a>
+                {% endif %}
+                <a class="grey-button-bordered button-pagination semi-rounded"
+                    href="?{% param_replace page=paginator.num_pages %}">Last</a>
+                {% endif %}
+
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Blog Grid Section END -->
+
+{% block extra_js %}
+<!-- <script>
+    function auto_serach() {
+        var location = document.getElementById('location')
+        var autocomplete = new google.maps.places.Autocomplete(location)
+    }
+</script> -->
+
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEtywbh0b6n4-jHcPWpdXYedd3JnockrY&libraries=places&callback=auto_serach"></script>
+<script>
+
+    autocomp = new google.maps.places.Autocomplete(document.getElementById('id_location'),
+        {
+            types: ['geocode'],
+            componentRestrictions: { country: "ng" }
+        });
+</script>
+<script>
+</script>
+{% endblock %}

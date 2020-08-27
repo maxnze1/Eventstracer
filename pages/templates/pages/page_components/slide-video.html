@@ -1,0 +1,28 @@
+{% for item in data %}
+<!-- Video Section START -->
+<div class="main-video-section">
+    <div class="video-area" id="video-area">
+        <div class="player" id="main-video-play"
+            data-property="{videoURL:'{{ item.video_banner }}', containment:'#video-area', showControls:false, autoPlay:true, zoom:0, loop:true, mute:true, startAt:0, opacity:1, quality:'high',}">
+        </div>
+        <div class="black-overlay-10">
+            <div class="main-video-content">
+                <div class="container">
+                    <div class="white-color">
+                        <!-- <h3 class="bold">{{ video.title }}</h3> -->
+                        <!-- <div class="mt-15">
+                            <h6>The first rule of any technology used in a business is that automation applied to an
+                                efficient operation will magnify the efficiency. The second is that automation applied
+                                to an inefficient operation will magnify the inefficiency.</h6>
+                        </div>
+                        <div class="mt-25">
+                            <a href="#" class="primary-button button-md">Become a Client</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- Video Section END -->

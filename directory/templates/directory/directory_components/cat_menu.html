@@ -1,0 +1,3 @@
+{% for c in categories %}
+<li><a href="{% url 'directory:directory_list_by_cat' c.id %}">{{c.name}}</a></li>
+{% endfor %}

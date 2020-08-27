@@ -1,0 +1,56 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load events_tags %}
+
+
+{% block content %}
+
+<div class="swiper-main-slider swiper-container">
+
+    <!-- events carousel 1 Start -->
+    {% include 'pages/page_components/slide-video.html' %}
+</div>
+<!-- events carousel END -->
+
+
+<!-- Info Section START -->
+{% include 'pages/page_components/tab-section.html' %}
+<!-- Info Section END -->
+
+<!-- Slide 1 Start -->
+{% include 'pages/page_components/carousel.html' %}
+</div>
+<!-- Slider END -->
+
+<!-- Map Section START -->
+{% include 'pages/page_components/video-box.html' %}
+<!-- Map Section END -->
+
+<!-- top events -->
+
+<!-- top events -->
+
+
+
+<!-- Parallax Section START -->
+{% include 'pages/page_components/subscribe-section.html' %}
+<!-- Parallax Section END -->
+
+
+
+{% include 'pages/page_components/video-row.html' %}
+<!-- Team Members END -->
+
+
+
+<!-- Contact Form Section START -->
+{% include 'pages/page_components/contact-form-section.html' %}
+<!-- Contact Form Section END -->
+
+
+<!-- Clients Carousel START -->
+{% include 'pages/page_components/partners_logos.html' %}
+<!-- Clients Carousel END -->
+
+
+{% endblock content %}

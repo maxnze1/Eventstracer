@@ -1,0 +1,34 @@
+<div class="container mb-80">
+    <div class=" center-holder mt-20 mb-40">
+        <h2 class="Inder"><span class="black ">Upcoming </span><span class="primary-color">Events</span> </h2>
+        <div class="section-heading-line"></div>
+    </div>
+
+    <div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="4" data-md-items="3"
+        data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="3500"
+        data-nav-dots="false" data-nav-arrows="true">
+        {% for item in top_events %}
+        <div class="wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
+            <div class="service-block event-card-title">
+                <a href="{{item.get_absolute_url}}">
+                    <img src="{{ item.image.url }}" alt="img">
+                    <div class="service-block-inner">
+                        <h5>{{item.title|truncatewords:2}}</h5>
+                </a>
+                <p>{{item.address|truncatewords:6|linebreaks}}</p>
+                <div class="service-block-button">
+                    {{ evt.address|truncatewords:6|linebreaks}}
+                    <div class="blog-grid-3-button left-holder">
+                        {% for tag in item.tags.all %}
+                        <a href="{% url 'events:events_by_tags' tag.slug %}">{{ tag.name}} <i class=""></i></a>
+                        {% if not forloop.last %}, {% endif %}
+                        {% endfor%}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>

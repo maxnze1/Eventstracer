@@ -1,0 +1,547 @@
+[
+    {
+        "model": "event.category",
+        "pk": 1,
+        "fields": {
+            "name": "Technology",
+            "slug": "technology",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 2,
+        "fields": {
+            "name": "Finance",
+            "slug": "finance",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 3,
+        "fields": {
+            "name": "Food & Drinks",
+            "slug": "food-drinks",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 4,
+        "fields": {
+            "name": "Leadership",
+            "slug": "leadership",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 5,
+        "fields": {
+            "name": "Agriculture",
+            "slug": "agriculture",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 6,
+        "fields": {
+            "name": "Media & Entertainment",
+            "slug": "media-entertainment",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 7,
+        "fields": {
+            "name": "Health & Fitness",
+            "slug": "health-fitness",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 8,
+        "fields": {
+            "name": "Education & Training",
+            "slug": "education-training",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 9,
+        "fields": {
+            "name": "Tourism & Hospitality",
+            "slug": "tourism-hospitality",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 10,
+        "fields": {
+            "name": "Others",
+            "slug": "others",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.category",
+        "pk": 11,
+        "fields": {
+            "name": "Fashion & Design",
+            "slug": "fashion-design",
+            "cat_image": ""
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 2,
+        "fields": {
+            "category": 1,
+            "title": "2019 National Business Conference",
+            "slug": "2019-national-business-conference",
+            "location": "Lagos",
+            "description": "<h3>Description</h3>\r\n\r\n<p>Register to attend the 2019 National Business Conference holding on Thursday October 3, 2019, in Lagos.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The conference theme is: &quot;Creating Connections-Building Bridges&hellip; Together&quot;</p>\r\n\r\n<p>VISIT the conference website at https://nationalbusinessconference.com.ng</p>\r\n\r\n<p>The conference aims to provide practical solutions and way forward for businesses and entrepreneurs and present emerging opportunities to harness. There will be connections with quality business professionals and presentations on referrals and networking techniques. In addition there will industry experts, lectures, business networking and interactions and keynote speakers.</p>\r\n\r\n<p>The Conference is hosted by BNI - the World&#39;s Largest and most successful business referral and networking organization.</p>\r\n\r\n<p>Registration and Attendance at this year&#39;s conference is now OPEN.</p>\r\n\r\n<p>www.bni-ng.com</p>",
+            "image": "events_pics/1_original_68QsH83.jpg",
+            "address": "Eko Hotels & Suites  1415 Adetokunbo Ademola Street  VICTORIA ISLAND  Lagos, LA",
+            "start_date": "2019-10-03T08:00:00Z",
+            "end_date": "2019-10-03T17:00:00Z",
+            "organizer": "by BNI NIGERIA",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": 10000,
+            "created": "2019-07-19T06:46:34.319Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [
+                1
+            ],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 3,
+        "fields": {
+            "category": 1,
+            "title": "LAGOS COMIC CON 2019",
+            "slug": "lagos-comic-con-2019",
+            "location": "Lagos",
+            "description": "<h3 style=\"text-align:start\"><span style=\"font-size:1rem\"><span style=\"color:#1e0a3c\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">Description</span></span></span></span></h3>\r\n\r\n<div class=\"has-user-generated-content js-d-read-more js-read-more read-more read-more--expanded read-more--medium-down\" style=\"-webkit-text-stroke-width:0px; padding:0px; text-align:start; text-indent:0px\">\r\n<div class=\"js-xd-read-more-toggle-view read-more__toggle-view\" style=\"padding:0px\">\r\n<div class=\"js-xd-read-more-contents l-mar-top-3\" style=\"margin-top:15px; padding:0px\">\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">The 8th edition of the Lagos Comic Convention promises to be the biggest and most engaging yet. A number of new activities will feature and the panel sessions wear a remodeled look for the purpose of enhancing the quality of discussions and audience take home. The usual activities remain, like cosplays, exhibitions, competitions and awards while this year, the concept of Lagos Comic Convention being the a desired marketplace for geek and pop culture contents will be materialized by way of a networking space. The best part for this year&rsquo;s event is that for the first time, Lagos Comic Convention will be a 3 day event, answering the yearn of thousands of attendees who have requested for an extension of the fun and business opportunities. This means exhibitors will make e times the sales, panel sessions and industry and market discussions will be deeper and extended, and brand exposure for our sponsors will be premium.</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Date: 19-21, September 2019.</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Venue: Alliance Francaise, Osborne Road, Ikoyi, Lagos, Nigeria.</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">MAJOR HOTSPOTS/ACTIVITIES</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Exhibitions</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Exhibitions spaces are outdoor with tents. Each stand is a 6x3ft space with a table and two chairs. Limited spaces are available.</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Panel Sessions and Master Classes</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">There will be 12 powerful panel sessions featuring elite speakers which include top execs is banking, media, TV, publishing, gaming, content distribution, etc. talking on subjects relating to content production in Africa, business funding, content distribution and marketing, growing audiences and building creative business brands in the African market.</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Master Classes will feature top professionals in the comics, animation, film, and book industry giving live tutorials on their trades ranging from storyboarding, script writing, film direction, film editing, story plotting, and comic colouring. There will be 12 master classes in total.</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Competitions</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">There will be a host of competitions with lots of prizes which attendees can enter for. They are;</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Board Games Competitions</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Console Games Competition</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Costume Competition (cosplay)</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Drawing Competitions</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Comic Pitch Competition</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Book Pitch Competition</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Animation Pitch Competition</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Film Pitch Competition</span></span></span></span></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Networking</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Business executives will find LCC a vital platform to network and establish new business leads for content sales, co-production, production commissioning, talent hunting, partnerships, etc. There will be a dedicated room for pre-arranged meetings.</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Awards</span></span></span></span></span></p>\r\n\r\n<p><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">The Fist Awards for best hands in the comics industry will hold at the event gala night.</span></span></span></span></span></p>\r\n</div>\r\n</div>\r\n</div>",
+            "image": "events_pics/https___cdn.evbuc.com_images_62552721_181050632616_1_original_dWoRqP3.jpg",
+            "address": "Alliance Francaise, Mike Adenuga Centre  9, Osborne Road  Ikoyi, Lagos",
+            "start_date": "2019-09-19T09:00:00Z",
+            "end_date": "2019-07-21T17:00:00Z",
+            "organizer": "MusterSeed Limited",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": 0,
+            "created": "2019-07-19T12:43:04.036Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 4,
+        "fields": {
+            "category": 3,
+            "title": "Lagos Expo 2019: Food Fai",
+            "slug": "lagos-expo-2019-food-fai",
+            "location": "Lagos",
+            "description": "<h3>Description</h3>\r\n\r\n<p>The Lagos Expo 2019, scheduled to hold on the 23rd and 24th November at Landmark beach will showcase the Fashion, Arts, Food and Drinks.</p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_63258377_272886437577_1_original.jpg",
+            "address": "Landmark Beach  4 Water Corporation Drive  Lagos, LA 101241",
+            "start_date": "2019-07-24T08:00:00Z",
+            "end_date": "2019-07-19T19:00:00Z",
+            "organizer": "The Afrik Diary",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": 2000,
+            "created": "2019-07-19T12:50:29.855Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 5,
+        "fields": {
+            "category": 1,
+            "title": "LAGOS 2019 Digital Transformation Summit",
+            "slug": "lagos-2019-digital-transformation-summit",
+            "location": "Lagos",
+            "description": "<h3>Description</h3>\r\n\r\n<h2>&nbsp;</h2>\r\n\r\n<h2><strong>The Future of Business in the African Continent</strong></h2>\r\n\r\n<h3>Lagos 2019 DX Summit is dedicated to ensure you think differently of how African businesses are rapidly changing and adapting to the dynamics of Digital Transformation, and how it is reshaping the future global business</h3>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>It is the largest gathering of digital transformation experts, business leaders and global disruptor focused on African businesses, it is dedicated to provide African businesses opportunity leverage digital transformation initiatives and solutions position their businesses for global competitive advantage. The summit include case study presentations, breakout sessions, panel discussion and technical workshops focused on key strategies, technology and solutions for developing and reaching targeted DX goals. Participants will walk away from the summit with tools and insights to map out their organization&rsquo;s digital transformation (DX) efforts. Participants will learn how to build a DX IT infrastructure that makes their brand compete globally and empower their employees with fast, organized workflows using top-of-the-line tools using Artificial Intelligence, Internet of Things, Cloud Computing, Machine Learning, Robotics, Automation, Big data analytics and many more.</p>\r\n\r\n<h3><strong>Topics For Panel Discussion</strong></h3>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>Trending Solutions: What are the latest technologies and solutions driving industry related digital transformation efforts especially as it realtes to Africa and global competition</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Strategy: How to redesign business architecture, technology delivery models and responsive development to drive innovation, growth and scales.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Aligning Data Strategies to Drive Digital Transformation: How african companies are adapting their data strategies and initiatives to support their company&rsquo;s digital transformation strategy.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Leadership: Partnering with the CEO, CIO and other executives to drive both disruptive and incremental change.</p>\r\n\t</li>\r\n</ul>\r\n\r\n<p><strong>Beakout Sessions</strong>&nbsp;-</p>\r\n\r\n<p>There are 4 breakout sessions planned for the summit with discussion topics related to Artificial intelligence, Internet of Things, Machine learning, Platformization, Robotics, inductrial automation, Big data, cloud computing and many more tailored to African organizations and how they can leverage trending technologies and solutions to positions their businesses for competitive global advantage. Question sessions will occur throughout, with case studies shared by various companies in attendance. Business leaders and Dx Experts will be on hand to answer questions and help with your implementationa and strategy efforts</p>\r\n\r\n<h3><strong>Who Should Attend</strong></h3>\r\n\r\n<p>Chief Executive Officers, Chief Marketing Officers, Chief Digital Officers, Chief Information Officers, Executive Vice Presidents, Vice Presidents, Executive Directors, Directors, Senior and Mid lLevel Managers, Business and Operations Managers, Analyst. IT Security Personnel, Academic and Research Personel, Business architechs, Engineers, Government Oficials and Global Heads responsible for managing and Implementing strategies related to enterprise technologies and solutions, business alignments, innovation, new market development and strategies, process optimization and re-engineering, new product development, customer service enhancement, operations management, investment management and many more</p>\r\n\r\n<p><strong>Attendee Benefits</strong></p>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>Opportunity for networking with industry experts to share DX experience, insites, latest technologies and solutions for todays enterprise</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Have one-one meeting with DX experts on conversions to move your companies digital transformation efforts and strategies to the next level</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Acess to industry related case studies from leaders and experts</p>\r\n\t</li>\r\n</ul>\r\n\r\n<p><img src=\"https://cdn.evbuc.com/eventlogos/207728615/summitspeakers2.jpg\" /></p>\r\n\r\n<p><img src=\"https://cdn.evbuc.com/eventlogos/207728615/summitpartners-2.jpg\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>For more information please visit our website coporate website www.iiema,org or the summit website www.summit.iiema.org . You may also call our office directly on +2347034600322 and used as well for Whatsapp or send email to info@iiema.org</p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_62675784_209182715305_1_original.jpg",
+            "address": "Lagos Oriental Hotel  3 Lekki - Epe Expressway  Lagos  Lagos, LA Lagos",
+            "start_date": "2019-07-26T08:00:00Z",
+            "end_date": "2019-07-19T17:00:00Z",
+            "organizer": "Organizer Institute Of Enterprise Management And Analytics",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": 100,
+            "created": "2019-07-19T12:58:02.505Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 8,
+        "fields": {
+            "category": 11,
+            "title": "Lagos Fashion Fair",
+            "slug": "lagos-fashion-fair",
+            "location": "Lagos",
+            "description": "<p style=\"text-align:justify\">Lagos Fashion fair is an &ldquo;International Fashion Exhibition&rdquo;.&nbsp; The exhibition is powered by Atlantic Exhibition Nigeria Limited.</p>\r\n\r\n<p style=\"text-align:justify\">The Lagos Fashion fair was conceived and created, due to the fact that Nigeria the largest population in Africa, its fast-growing dynamic economy and one of the future stars in the world which today attracts exporters and investors from all over the world. There is a huge demand for the fashion industries in the country which is unreluctantly to trade all kind of products.</p>",
+            "image": "events_pics/lagos-fashion-fair-25th27th-september-2019-50.jpeg",
+            "address": "Eko Hotels & Suites, Lagos, Nigeria",
+            "start_date": "2019-09-25T09:00:00Z",
+            "end_date": "2019-09-27T17:00:00Z",
+            "organizer": "Atlantic Exhibition Nig Ltd",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T10:57:42.252Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 9,
+        "fields": {
+            "category": 1,
+            "title": "Africa Data Centre & Cloud Summit",
+            "slug": "africa-data-centre-cloud-summit",
+            "location": "Lagos",
+            "description": "<p style=\"text-align:justify\"><strong>&quot;Cloud, Edge and Beyond&quot;</strong><br />\r\nAfrica is leapfrogging into new technology with the huge adoption of the smartphone which has led to an explosion of data. The need for data centres grows exponentially, with a report from Statista indicating that an estimated $188 billion is going towards data centres systems. Many global companies are looking to Africa for data centre development and support. Several factors have contributed to the growth of the African DC market, including lower fiber prices, a high rate of workload&nbsp;migration to the cloud, the rise of consumer and enterprise digital natives, and growing user concerns over data privacy, security and sovereignty. Nigeria is ranked among the top five countries for DC markets in Africa. With over 25 licensed commercial banks in the country and several other foreign banks, it is also attracting maximum investments on the DC front. Register for the Summit now and learn of the rapid developments and opportunities for data centres and cloud tech emerging for Africa.</p>",
+            "image": "events_pics/eventlogo-69-1554702863.jpg",
+            "address": "Lagos, Nigeria",
+            "start_date": "2019-10-16T09:00:00Z",
+            "end_date": "2019-10-17T18:00:00Z",
+            "organizer": "Magenta Global Pte Ltd Singapore",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T11:13:23.102Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 11,
+        "fields": {
+            "category": 4,
+            "title": "AFRICA YOUTH AND TALENT SUMMIT 2019, LAGOS-NIGERIA",
+            "slug": "africa-youth-and-talent-summit-2019-lagos-nigeria",
+            "location": "Lagos",
+            "description": "<h3><span style=\"font-size:1rem\"><span style=\"color:#1e0a3c\">Description</span></span></h3>\r\n\r\n<div class=\"has-user-generated-content js-d-read-more js-read-more read-more read-more--expanded read-more--medium-down\" style=\"padding:0px\">\r\n<div class=\"js-xd-read-more-toggle-view read-more__toggle-view\" style=\"padding:0px\">\r\n<div class=\"js-xd-read-more-contents l-mar-top-3\" style=\"margin-top:15px; padding:0px\">\r\n<p><span style=\"color:#6f7287\"><strong><em>Attending #AYTSummit2019 is like earning a master degree in business.</em></strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\">Africa Youth and Talent Summit heads into its 3rd year after a successful 2017 &amp; 2018 edition that saw over 1,000 attendees majorly from Africa countries including, Ghana, Kenya, Nigeria, Somalia, Togo, and Zimbabwe and had a global online reach of 2 million.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\">The annual Summit is arguably Africa&#39;s largest Youth and Talent Development Platform. The summit returns to Nigeria on 24th August 2019. AYTS week-long programming focuses on youth, personal development, ideas, trends, insights, business agriculture, and best practices to transform communities across Africa.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>2019 SUMMIT THEME</strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\">The theme for 2019 is&nbsp;<strong>The Role of Youth in Building Africa&#39;s Economy.</strong>&nbsp;The summit will feature A-list facilitators and panelist from across Africa.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>AYTSummit 2019 PROGRAMMING:</strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\">Conference programming accesses an on-site attendee pool of over 1,000 young Africa thought leaders with an additional online reach upwards of 4 million people worldwide.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Topic of discussion includes;</strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\">-Leadership and Personal Development<br />\r\n-Business Development<br />\r\n-Effective Business Communication</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Participation Fee</strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\">Attending #AYTSummit2019 is like earning a master degree in business.&nbsp;</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Youth Ticket (Ticket is FREE and covers)</strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\">- Access to Main/Syndicate Sessions</span></p>\r\n\r\n<p><span style=\"color:#6f7287\">- A certificate is N3,000 and optional.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>VIP Ticket covers (N7,000)</strong><br />\r\n-Free unlimited Wifi during the summit<br />\r\n-AYTS Network Nigeria membership<br />\r\n(Access to free training, workshops, and specialized sessions)<br />\r\n-Hard Copy Summit Certificate presented at the summit<br />\r\n-Special Delegate Seat with name/country tags</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Executive Ticket covers (10,000)</strong><br />\r\n-Special seat arrangement with Keynote Session Speakers&nbsp;<br />\r\n-Free unlimited Wifi during the summit<br />\r\n-AYTS Network Nigeria membership<br />\r\n(Access to free training, workshops, and specialized sessions)<br />\r\n-Hard Copy Summit Certificate presented at the summit</span></p>\r\n\r\n<p><br />\r\n<span style=\"color:#6f7287\">Kindly pay to AYTS Network 0109068450 Access/Diamond Bank. Once payment is made, send your teller and your full names to inkmediang@gmail.com to enable us to serve you better.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Experiences:</strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\">Some of AYTS most memorable moments happen outside the summit environment. We have created AYTS&nbsp;<strong>NETWORK GHANA, AYTS NETWORK KENYA</strong>, and&nbsp;<strong>AYTS NETWORK NIGERIA</strong>&nbsp;to sustain the impact of our summits.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Registration Closes</strong>&nbsp;11:59 pm on Friday, 15th of July, 2019</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Enquiries/Partnership/Sponsorship:</strong>&nbsp;Tel: +254712634577 (Kenya), +234-909-529-2240 (Nigeria), +233-245-870-928 (Ghana) Email: contact@aytsummit.org, www.aytsummit.org</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>FAQs</strong></span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>What are my transportation/parking options for getting to and from the event?</strong>&nbsp;Hotel Accommodation and Transportation Services will be provided by Service Agents at a subsidized rate. If you need any of these services, write us via contact@aytsummit.org</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Do I have to bring my printed ticket to the event?</strong>&nbsp;Yes, kindly come with your printed ticket for accreditation</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Is my registration fee or ticket transferrable?</strong>&nbsp;No, registration ticket is not transferable</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Is it ok if the name on my ticket or registration doesn&#39;t match the person who attends?</strong>&nbsp;No</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>What is the Purpose of the Summit?</strong>&nbsp;To educate youth with skills for continental development across sectors of the Africa economy. -To unite Africa&rsquo;s youth towards building a strong relationship for continental growth through ideas shared from the summit. &ndash; To present a positive development framework to the AU countries, ministries of youths government and public universities within the continent. &ndash; To learn from renowned and qualified experts on various career development for the betterment of our continent.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>What benefits will I receive as a participant?</strong>&nbsp;&bull; To become a skilled African Youth &bull; Network with youths from around Africa &bull; Join a continental discuss for youth development</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>Who can participate in the Summit?</strong>&nbsp;Youths from around the continent &bull; Aged between 18 and 35 &bull; Good communication skills in English</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>What is the official language of the Summit?</strong>&nbsp;The official language for the summit will be in English. However, we will have translators for other major tribes.</span></p>\r\n\r\n<p><span style=\"color:#6f7287\"><strong>How to participate in the Summit?</strong>&nbsp;Click the Register button and fill in the application form</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
+            "image": "events_pics/https___cdn.evbuc.com_images_63368661_180486029870_1_original_1.jpg",
+            "address": "D'Podium International Event Centre  31b Aromire Avenue  Off Adeniyi Jones  Ikeja, Lagos, Lagos 234",
+            "start_date": "2019-08-24T08:00:00Z",
+            "end_date": "2019-08-24T16:00:00Z",
+            "organizer": "AYTS NETWORKS",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T11:45:10.001Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 12,
+        "fields": {
+            "category": 4,
+            "title": "2019 National Business Conference",
+            "slug": "2019-national-business-conference-2",
+            "location": "Lagos",
+            "description": "<h3>Description</h3>\r\n\r\n<p>Register to attend the 2019 National Business Conference holding on Thursday October 3, 2019, in Lagos.</p>\r\n\r\n<p>The conference theme is: &quot;Creating Connections-Building Bridges&hellip; Together&quot;</p>\r\n\r\n<p>VISIT the conference website at&nbsp;<a href=\"https://nationalbusinessconference.com/\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" title=\"2019 NATIONAL BUSINESS CONFERENCE\">https://nationalbusinessconference.com.ng</a></p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_54466384_250641626317_1_original_1.jpg",
+            "address": "Eko Hotels & Suites  1415 Adetokunbo Ademola Street  VICTORIA ISLAND  Lagos, LA",
+            "start_date": "2019-10-03T09:00:00Z",
+            "end_date": "2019-10-03T17:00:00Z",
+            "organizer": "BNI NIGERIA",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T11:56:28.281Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 13,
+        "fields": {
+            "category": 10,
+            "title": "Lagos Expo: Fashion, Arts, Food, Drinks.",
+            "slug": "lagos-expo-fashion-arts-food-drinks",
+            "location": "Lagos",
+            "description": "<p style=\"text-align:justify\">The Lagos Expo 2019, scheduled to hold on the 23rd and 24th November at Landmark Event centre, will showcase African beauty, culture and creativity globally by focusing of four areas which include: FASHION, ARTS, FOOD AND DRINKS. An estimated 100 exhibitors and 10,000 visitors are expected to storm the two days expo, that is billed to be one of the largest gathering of people from the creative industry across Africa like Ghana, Senegal, Togo and Cameroon.</p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_62270744_272886437577_1_original.jpg",
+            "address": "Landmark Beach  4 Water Corporation Drive  Lagos, LA 101241",
+            "start_date": "2019-11-23T09:00:00Z",
+            "end_date": "2019-11-24T18:00:00Z",
+            "organizer": "The Afrik Diary",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T12:06:17.206Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 14,
+        "fields": {
+            "category": 11,
+            "title": "THE LAGOS LEATHER FAIR 2019",
+            "slug": "the-lagos-leather-fair-2019",
+            "location": "Lagos",
+            "description": "<h3 style=\"text-align:justify\"><span style=\"font-size:1rem\"><span style=\"color:#1e0a3c\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">Description</span></span></span></span></h3>\r\n\r\n<div class=\"has-user-generated-content js-d-read-more js-read-more read-more read-more--expanded read-more--medium-down\" style=\"-webkit-text-stroke-width:0px; padding:0px; text-align:start; text-indent:0px\">\r\n<div class=\"js-xd-read-more-toggle-view read-more__toggle-view\" style=\"padding:0px\">\r\n<div class=\"js-xd-read-more-contents l-mar-top-3\" style=\"margin-top:15px; padding:0px\">\r\n<div style=\"padding:0px\">\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Keep your calendars open for The Lagos Leather Fair 2019!!</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Come September, the Lagos Leather Fair will play host to the major players within the Nigerian leather industry. The&nbsp;theme for the 2019 Edition is: Advancing the Conversation.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Date - Saturday, 7th September to Sunday, 8th September 2019.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">Venue - Harbour Point, Victoria Island, Lagos.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">The event will play host to about 70 Nigerian leather designers and will also welcome a few international designers. It will feature Exhibitions, Conversations, Creative Workshops and Runway Presentations.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">The Lagos Leather Fair is set to promote the work of leather designers and the Made-in-Nigeria initiative by showcasing local talent and attempt to connect the dots in a potentially powerful industry. The event is powered by FemiHandbags.</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">YD AGENCY:</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">YD</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">08180054430</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><a href=\"mailto:ydagency@yettyd.com\" rel=\"nofollow noopener noreferrer\" style=\"color:var(--eds-control,#3659e3); text-decoration:none; cursor:pointer; padding-top:0px\" target=\"_blank\">ydagency@yettyd.com</a></span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">LLF TEAM</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">Joseph</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">0907 021 3121 | 0908 472 0800</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">Koko</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">0814 001 0019</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><a href=\"mailto:info@thelagosleatherfair.com\" rel=\"nofollow noopener noreferrer\" style=\"color:var(--eds-control,#3659e3); text-decoration:none; cursor:pointer; padding-top:0px\" target=\"_blank\">info@thelagosleatherfair.com</a></span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\">www.thelagosleatherfair.com</span></span></span></span></div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<div style=\"padding:0px; text-align:justify\">&nbsp;</div>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">#LLF2019</span></span></span></span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:14.9333px\"><span style=\"color:#39364f\"><span style=\"font-family:&quot;Neue Plak&quot;,-apple-system,BlinkMacSystemFont,Roboto,&quot;Helvetica Neue&quot;,Helvetica,Tahoma,Arial,sans-serif\"><span style=\"background-color:#ffffff\"><span style=\"color:#6f7287\">#Advancingtheconversation</span></span></span></span></span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+            "image": "events_pics/https___cdn.evbuc.com_images_63952183_3235807198_1_original.jpg",
+            "address": "Harbour Point  4 Wilmot Point Road  Lagos, LA",
+            "start_date": "2019-09-07T09:00:00Z",
+            "end_date": "2019-09-08T12:00:00Z",
+            "organizer": "THE LAGOS LEATHER FAIR",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T12:19:09.028Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 15,
+        "fields": {
+            "category": 1,
+            "title": "Africa Drones And Technology Expo (AfDRATE) 2019",
+            "slug": "africa-drones-and-technology-expo-afdrate-2019",
+            "location": "Lagos",
+            "description": "<h3 style=\"text-align:justify\">Description</h3>\r\n\r\n<p style=\"text-align:justify\">Africa and especially, Nigeria&#39;s drone and tech industry is expanding across all industries, including mining, agriculture, security, telecommunications, emergency response, wildlife protection, search and rescue and more! Meanwhile, Science, Technology, Engineering &amp; Maths (STEM) education has been very neglected by both government and private sector in this part of the World</p>\r\n\r\n<p style=\"text-align:justify\">Exodus Int&#39;l Aviation Academy proudly hosts the first annual Drone and Technology Conference &amp; Expo in Africa, with over 40&nbsp;speakers and an exciting offering of exhibitors. Presenting the perfect platform to learn from and network with high tech, robotics, IT, mechatronics, drone manufacturers, suppliers, distributors and professionals, as well as offering live drone demonstrations and regulatory workshops, AfDRATE is the place to be for all drone enthusiasts and tech professionals.</p>\r\n\r\n<p style=\"text-align:justify\">Book your ticket now to secure your spot and join us for the maiden edition of this Drone and STEM Educational Expo. There will be live flying demonstrations in the exhibition area where you will see the flying machines in action!</p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_59328472_254379337420_1_original.jpg",
+            "address": "Unilag Nigeria  Akoka Road  Lagos, LA",
+            "start_date": "2019-10-15T09:00:00Z",
+            "end_date": "2019-10-17T16:00:00Z",
+            "organizer": "Organizer Exodus Int'l Aviation Academy",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T12:50:38.124Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 16,
+        "fields": {
+            "category": 10,
+            "title": "LIVE SMART CITY",
+            "slug": "live-smart-city",
+            "location": "Lagos",
+            "description": "<h3>Description</h3>\r\n\r\n<p>LIVESMARTCITY - Travel, Live, Work &amp; Startup at Live Smart City the World&#39;s First Smart City For The HOMELESS.</p>\r\n\r\n<p>This Event is for Entrepreneurs, Startups, Students, Businesses, SMEs, Governments and Everyone.</p>\r\n\r\n<p>Limited Seats &amp; Tours - Signup now! Its Free - http://www.livesmartcity.com</p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_42879383_245643173368_1_original.jpg",
+            "address": "Sheraton Lagos Hotel  30 Mobolaji Bank Anthony Way, Lagos\u200e  Lagos, Lagos 021189",
+            "start_date": "2019-11-04T09:00:00Z",
+            "end_date": "2019-11-05T18:00:00Z",
+            "organizer": "Organizer LiveSmartCity",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-23T13:14:58.358Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [
+                1
+            ],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 19,
+        "fields": {
+            "category": 1,
+            "title": "CyberChain2019",
+            "slug": "cyberchain2019",
+            "location": "Lagos",
+            "description": "<h3>Description</h3>\r\n\r\n<p>Get ready for the best Cyber Security and Blockchain Conference/Exhibition in Nigeria - #CyberChain2019 #CC2019 #VaultBridge</p>\r\n\r\n<p>In 2018, our Blockchain and Cyber Security Conference (West Africa Cyber Security and Blockchain Technology Conference - #WACSBTC) was thought provoking, revealing and disruptive.</p>\r\n\r\n<p>This year 2019, we have upgraded our conference to &quot;CyberChain&quot; in other to better accommodate experts and enthusiasts from around the world in both ecosystems.</p>\r\n\r\n<p>We have industry partners from abroad and of course here at home, showcasing various projects, products and services.</p>\r\n\r\n<p>There will be free tokens (cryptocurrencies) and other valuable stuffs from some of our sponsors and partners.</p>\r\n\r\n<p>(If you attended our previous conference, you can attest to this)</p>\r\n\r\n<p>You will have first hand experience of various Cybersecurity concepts, applications and solutions as well as exposure to multiple Blockchain developments and use cases.</p>\r\n\r\n<p>You will also learn about #Blockchain, #Smart Contracts and #Cryptocurrencies</p>\r\n\r\n<p>Register now to secure your seat.</p>\r\n\r\n<p>For speaking slot, sponsorship, exhibition or partnership, kindly send an email to contact@vaultbridge.org</p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_65007330_241048081318_1_original_1KKjys3.jpg",
+            "address": "9 Oniru Main Road, By City of David, After Four Points Hotel, Lekki, Lagos,Nigeria",
+            "start_date": "2019-08-31T09:00:00Z",
+            "end_date": "2019-08-31T18:00:00Z",
+            "organizer": "VaultBridge",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-07-29T12:06:18.895Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 28,
+        "fields": {
+            "category": 5,
+            "title": "Firstbank Agric Expo Set To Promote New Agribusiness Opportunities",
+            "slug": "firstbank-agric-expo-set-to-promote-new-agribusiness-opportunities",
+            "location": "Lagos",
+            "description": "<p>Nigerias premier and leading financial services provider, First Bank of Nigeria Limited, has announced that its 2019 FirstBank Agric Expo would hold on Friday, 30 August 2019 at the Eko Hotel and Suites, Lagos.</p>\r\n\r\n<p>The 2019 edition &ndash; the third in the series &ndash; is themed Agricultural Value Chain &ndash; Spotlighting Opportunities and Managing Risks would have Professor Benedict Oramah, President of AFREXIM Bank as the Keynote Speaker.</p>\r\n\r\n<p>The annual FirstBank Agric Expo, launched in 2017 provides the lead in national discourse on sustainable agriculture value-chain as a substantial source of Nigerias economic development, improved contribution to her balance of trade as well as foreign exchange.</p>\r\n\r\n<p>The 2019 edition would host over 600 delegates and over 60 exhibitors to display the latest technology in farm equipment, tools and machineries as well as packaged finished agricultural produce, logistics and supply, thereby keeping the participants and sundry agribusiness practitioners abreast with new opportunities in the Agricultural industry.</p>\r\n\r\n<p>Besides the plenary session, the expo will feature three (3) Masterclasses with in-depth analysis on specific areas of Agribusiness, facilitated by enterprising Subject Matter Experts (SMEs).</p>\r\n\r\n<p>The Masterclass facilitators include Mr. Leonard Anyanwu, Group Executive Director, Saro International Limited; Mr Segun Ogunwale, Team Lead, Kominity Digital and Mr Bamidele Ayemibo Managing Director, 3T Impex Trade Centre, who will provide insight as well as share success stories and experiences.</p>\r\n\r\n<p>Expressing his delight on FirstBank leading role at not just promoting Agriculture but diversifying the Nigerian economy, the CEO, First Bank of Nigeria Limited, Dr. Adesola Adeduntan said, in the last 125 years, more than any other financial institution, we have played a key role in financing different sectors of not just the Nigerian economy but other economies in sub-Saharan Africa.</p>\r\n\r\n<p>As Nigeria expands opportunities in its non-oil sector &ndash; especially Agriculture &ndash; we remain committed to the growth of the agricultural sector and its contribution to the nation&rsquo;s Gross Domestic Product.</p>\r\n\r\n<p>Our consistency in convening the FirstBank Agric Expo, which is in its third consecutive edition, is a demonstration of our commitment to building the agribusiness economy which is capable of delivering sustained prosperity by meeting domestic food security goals, generating exports, supporting sustainable income and creating employment opportunities, he concluded.</p>",
+            "image": "events_pics/Screenshot_2019-08-28_at_11.26.21_AM.png",
+            "address": "Eko Hotel & Suites, Victoria Island, Lagos",
+            "start_date": "2019-08-30T08:00:00Z",
+            "end_date": "2019-08-30T17:00:00Z",
+            "organizer": "First Bank Of Nigeria",
+            "contact_person": "firstcontact@firstbanknigeria.com,  07080625000",
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-08-28T10:17:57.772Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 29,
+        "fields": {
+            "category": 1,
+            "title": "AI and IOT Seminar",
+            "slug": "ai-and-iot-seminar",
+            "location": "Lagos",
+            "description": "<p><strong>Artificial intelligence</strong>&nbsp;(AI) is the simulation of human<strong>intelligence</strong>&nbsp;processes by machines, especially computer systems. These processes include learning (the acquisition of information and rules for using the information), reasoning (using rules to reach approximate or definite conclusions) and self-correction.In computer science, artificial intelligence, sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans.</p>\r\n\r\n<p>The internet of things, or IoT on the other hand, is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction</p>",
+            "image": "events_pics/WhatsApp_Image_2019-08-29_at_10.57.56_AM.jpeg",
+            "address": "49 RAUFU WILLIAMS CRESCENT, Surulere",
+            "start_date": "2019-09-13T10:00:00Z",
+            "end_date": "2019-09-13T17:00:00Z",
+            "organizer": "VBL",
+            "contact_person": "Maxwell Nzekwe",
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-08-29T15:16:43.334Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [
+                1
+            ],
+            "attending": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 30,
+        "fields": {
+            "category": 6,
+            "title": "Nigerian International Film Summit",
+            "slug": "nigerian-international-film-summit",
+            "location": "Lagos",
+            "description": "<p style=\"text-align:justify\"><strong>A top level networking B2B Summit bringing together TV and film executives interested in understanding the Nigerian film&amp;TV business</strong></p>\r\n\r\n<h2 style=\"text-align:justify\">About this Event</h2>\r\n\r\n<p style=\"text-align:justify\">Producing with Nigeria.</p>\r\n\r\n<p style=\"text-align:justify\">Developing and Creating Original and Appealing Content for Africa and Beyond.</p>\r\n\r\n<p style=\"text-align:justify\">&bull; Engaging business discussions and panel sessions on film and TV business with Nigeria</p>\r\n\r\n<p style=\"text-align:justify\">&bull; Networking events (executive lunch, breaks, happy hours, cocktails, screenings e.t.c.) to meet and connect with film and TV executive</p>\r\n\r\n<p style=\"text-align:justify\">&bull; Industry Workshops and round table discussions</p>\r\n\r\n<p style=\"text-align:justify\">&bull; Organized Meeting Assistance Service</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62686390%2F308884021041%2F1%2Foriginal.20190522-032545?h=2000&amp;w=720&amp;auto=compress&amp;s=f7e13897a6a1b84ca50a02b1c4885dca\" /></p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62686426%2F308884021041%2F1%2Foriginal.20190522-032655?h=2000&amp;w=720&amp;auto=compress&amp;s=b7876606bdd3e2bb4fc3b81f9dc8d20c\" /></p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62686463%2F308884021041%2F1%2Foriginal.20190522-032813?h=2000&amp;w=720&amp;auto=compress&amp;s=a9ccbdd996ac71247dc36057203a5ddd\" /></p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62686546%2F308884021041%2F1%2Foriginal.20190522-033030?h=2000&amp;w=720&amp;auto=compress&amp;s=cbb2966954f045d1d407411eace2e2b1\" /></p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62686576%2F308884021041%2F1%2Foriginal.20190522-033127?h=2000&amp;w=720&amp;auto=compress&amp;s=d70f383e9d24608359bd376fe2df5ff3\" /></p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>",
+            "image": "events_pics/https___cdn.evbuc.com_images_62686294_308884021041_1_original.jpg",
+            "address": "Lagos  38/40 Isaac John St  Ikeja GRA  Ikeja, Lagos 100271",
+            "start_date": "2019-09-03T09:00:00Z",
+            "end_date": "2019-09-05T17:00:00Z",
+            "organizer": "Organizer Nigerian International Film & TV Summit - Www.Nifsummit.Com",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-09-02T14:44:02.059Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 31,
+        "fields": {
+            "category": 8,
+            "title": "Python Master Class",
+            "slug": "python-master-class",
+            "location": "Lagos",
+            "description": "<p><strong>WHAT IS PYTHON?</strong></p>\r\n\r\n<p>Python is an object-oriented, high-level programming language with integrated dynamic semantics. Python is much popular because it is highly productive as compared to other programming languages like C++ and Java. It is much more concise and expressive language and requires less time, effort, and lines of code to perform the same operations.</p>\r\n\r\n<p>Python features like one-liners and dynamic type language, allow developers to write very fewer lines of code for tasks that require more lines of code in other languages. This makes Python a very easy-to-learn programming language for beginners and newbies. For instance, Python programs take very less time to develop, as Python codes are 3 to 5 times shorter than Java codes.</p>\r\n\r\n<p><strong>8 REASONS WHY YOU SHOULD LEARN PYTHON?</strong><br />\r\n<strong>1.&nbsp;&nbsp; &nbsp;DATA SCIENCE</strong><br />\r\nPython offers libraries like Pandas, NumPy, Scipy and Scikitlearn on AI, Data Science, and Machine learning. Python experience also allows you to do a lot more e.g. you can create scripts to automate stuff, go into web development and so much more.<br />\r\nMachine Learning is growing at an exponential rate, this means that Algorithms are becoming more sophisticated every day. Python is the only major programming language which makes it easy.</p>\r\n\r\n<p><br />\r\n<strong>2.&nbsp;&nbsp; &nbsp;WEB DEVELOPMENT</strong><br />\r\nAs a web developer, Python offers so many good libraries and frameworks e.g. Django and Flask which makes web development really easy. A task which takes hours in PHP can be completed in minutes on Python.&nbsp;</p>\r\n\r\n<p><br />\r\n<strong>3.&nbsp;&nbsp; &nbsp;SIMPLICITY</strong><br />\r\nPython is both readable and simple. It also easier to setup, you don&rsquo;t need to deal with any class path problems like Java or compiler issues like C++. Just install Python and you are done!</p>\r\n\r\n<p><br />\r\n<strong>4.&nbsp;&nbsp; EASY</strong><br />\r\nPython has a sheer number of open source libraries, frameworks, and modules that allows you to do whatever you want to do. It makes application development really easy.</p>\r\n\r\n<p><br />\r\n<strong>5.&nbsp;&nbsp; AUTOMATION</strong><br />\r\nPython offers power modules for writing scripts and automation. With Python, you can automate all the boring stuff.</p>\r\n\r\n<p><br />\r\n<strong>6. MULTIPURPOSE</strong><br />\r\nWith Python you can do so many things. You can create your web applications using Django and Flask. Prepare Data Analysis using NumPy, Scipy, Scikit-Learn, and NLTK.<br />\r\nAt a bare minimum, you can use Python to write scripts to automate many of your days to day tasks.</p>\r\n\r\n<p><br />\r\n<strong>7.&nbsp;&nbsp; JOBS AND GROWTH</strong><br />\r\nPython is growing really fast and big time and it makes a lot of sense to learn a growing programming language especially if you are just starting out on your programming career.</p>\r\n\r\n<p>It helps you get a job quickly as well as accelerate your career growth.&nbsp;</p>\r\n\r\n<p><br />\r\n<strong>8.SALARY</strong><br />\r\nPython developers are one of the highest paid developers, particularly in the Data Science, Machine learning and web development.</p>\r\n\r\n<p><strong>CONCLUSION</strong><br />\r\nWhether new or advanced in Programming, Python is a great way to start learning to code. For the Beginner, it is the simplest and easiest way to learn how to code.&nbsp;<br />\r\nFor programmers who already know Java or C++, learning Python not just make you a Polyglot programmer but also gives you a powerful tool in your arsenal to write scripts, create a web application and open door on exciting field of Data Science and Machine Learning.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>Course outline</strong></span><br />\r\n________________________________________<br />\r\n<strong>Overview</strong><br />\r\nThis course is for students who are new to python language and who may or may not have experience with other programming languages.&nbsp;</p>\r\n\r\n<p><strong>Prerequisites</strong><br />\r\nSome programming experience would be beneficial.</p>\r\n\r\n<p>Course Outline</p>\r\n\r\n<p><strong>1. The Basics Basics</strong><br />\r\nRunning Python<br />\r\nHello, World!<br />\r\nLiterals<br />\r\nPython Comments<br />\r\nData Types<br />\r\nVariables<br />\r\nWriting a Python Module<br />\r\nprint() Function<br />\r\nNamed Arguments<br />\r\nCollecting User Input<br />\r\nGetting Help</p>\r\n\r\n<p><strong>2. Functions and Modules</strong><br />\r\nDefining Functions<br />\r\nVariable Scope<br />\r\nGlobal Variables<br />\r\nFunction Parameters<br />\r\nReturning Values<br />\r\nImporting Modules</p>\r\n\r\n<p><strong>3. Math</strong><br />\r\nArithmetic Operators<br />\r\nModulus and Floor Division<br />\r\nAssignment Operators<br />\r\nBuilt-in Math Functions<br />\r\nThe math Module<br />\r\nThe random Module<br />\r\nSeeding</p>\r\n\r\n<p><strong>4. Python Strings</strong><br />\r\nQuotation Marks and Special Characters<br />\r\nString Indexing<br />\r\nSlicing Strings<br />\r\nConcatenation and Repetition<br />\r\nCommon String Methods<br />\r\nString Formatting<br />\r\nBuilt-in String Functions</p>\r\n\r\n<p><strong>5. Iterables: Sequences, Dictionaries, and Sets</strong><br />\r\nDefinitions<br />\r\nSequences<br />\r\nUnpacking Sequences<br />\r\nDictionaries<br />\r\nThe len() Function<br />\r\nSets<br />\r\n*args and **kwargs</p>\r\n\r\n<p><strong>6. Flow Control</strong><br />\r\nConditional Statements<br />\r\nThe is and is not Operators<br />\r\nPython&#39;s Ternary Operator<br />\r\nLoops in Python<br />\r\nThe enumerate() Function<br />\r\nGenerators<br />\r\nList Comprehensions</p>\r\n\r\n<p><strong>7. File Processing</strong><br />\r\nOpening Files<br />\r\nThe os and os.path Modules</p>\r\n\r\n<p><strong>8. Exception Handling</strong><br />\r\nWildcard except Clauses<br />\r\nGetting Information on Exceptions<br />\r\nThe else Clause<br />\r\nThe finally Clause<br />\r\nUsing Exceptions for Flow Control<br />\r\nException Hierarchy</p>\r\n\r\n<p><strong>9. Dates and Times</strong><br />\r\nUnderstanding Time<br />\r\nThe time Module<br />\r\nThe datetime Module</p>\r\n\r\n<p><strong>10. Project</strong></p>\r\n\r\n<p><br />\r\n&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+            "image": "events_pics/d48f6206-bcfa-49af-9679-e567514df5cc.jpg",
+            "address": "49 Raufu Williams, Masha, Surulere",
+            "start_date": "2019-09-17T21:23:00Z",
+            "end_date": "2019-09-19T21:24:00Z",
+            "organizer": "VB Academy",
+            "contact_person": null,
+            "has_ticket": false,
+            "amount": 100000,
+            "created": "2019-09-02T20:27:36.835Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [
+                1
+            ],
+            "attending": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "event.eventpage",
+        "pk": 32,
+        "fields": {
+            "category": 4,
+            "title": "The Event Industry Conference 2019",
+            "slug": "the-event-industry-conference-2019",
+            "location": "Lagos, Nigeria",
+            "description": "<p>The Event Industry Conference 2019</p>",
+            "image": "events_pics/d860a935-ea6d-4820-a49e-97d70f60d05f.jpg",
+            "address": "Havilla Hall, Victoria Island, Lagos.",
+            "start_date": "2019-09-18T09:00:00Z",
+            "end_date": "2019-09-22T17:00:00Z",
+            "organizer": "APPOEMN",
+            "contact_person": "appoemnnigeria@gmail.com",
+            "has_ticket": false,
+            "amount": null,
+            "created": "2019-09-03T09:56:15.500Z",
+            "status": "publish",
+            "author": 1,
+            "interest": [],
+            "attending": []
+        }
+    }
+]

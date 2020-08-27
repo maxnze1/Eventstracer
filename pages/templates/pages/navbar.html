@@ -1,0 +1,86 @@
+{% load static %}
+{% load directory_tags %}
+{% load sme_tags %}
+{% load news_tags %}
+<!-- Top-Bar START -->
+<div id="top-bar" class="hidden-md-down">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-9 col-12">
+				<ul class="social-icons hidden-sm">
+					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+					<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-12">
+				<ul class="top-bar-info">
+					{% if user.is_authenticated %}
+					<li class="social-icons"><a href="{% url 'account_logout' %}">Logout</a></li>
+					<li class="social-icons"><a href="{% url 'users:profile' %}">Profile</a></li>
+					{% else %}
+					<li class=""><a href="{% url 'account_login' %}">Login</a></li>
+					<li><a href="{% url 'account_signup' %}">Create Account</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Top-Bar END -->
+
+
+
+<!-- Navbar START -->
+<header>
+	<nav id="navigation4" class="container navigation">
+		<div class="nav-header">
+			<a class="nav-brand" href="/">
+				<img src="{% static 'img/logos/logo.png' %}" alt="logo" id="main_logo">
+			</a>
+			<div class="nav-toggle"></div>
+		</div>
+
+
+		<div class="nav-menus-wrapper">
+			<ul class="nav-menu align-to-right">
+				<li><a href="/about">About</a>
+				</li>
+				<li><a href="{% url 'events:events' %}">Events</a>
+					<ul class="nav-dropdown">
+						<li><a href="/events">View Events</a></li>
+						<li><a href="{% url 'events:create' %}">Create Events</a></li>
+					</ul>
+				</li>
+				<li><a href="/advisory">Advisory</a>
+				</li>
+				<li><a href="/news">News</a>
+					<ul class="nav-dropdown">
+						{% news_category %}
+					</ul>
+				</li>
+				<li><a href="{% url 'directory:directory' %}">Directory</a>
+					<ul class="nav-dropdown">
+						<li><a href="/directory">View Directory</a></li>
+						<li><a href="{% url 'directory:create' %}">List your business</a></li>
+					</ul>
+				</li>
+				<li><a href="/videos">Videos</a>
+				</li>
+				<li><a href="#">SME Circuit</a>
+					<ul class="nav-dropdown">
+						{% sme_category %}
+					</ul>
+				</li>
+				<li><a href="/tv">Event TV</a>
+				</li>
+				<li><a href="/training">Training</a>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+</header>
+<!-- Navbar END -->

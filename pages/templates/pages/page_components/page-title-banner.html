@@ -1,0 +1,15 @@
+<!-- Page Title START -->
+{% for item in about_data %}
+<div class="page-title jarallax black-overlay-20" data-jarallax data-speed="0.6"
+    style="background-image: url('{{ item.page_banner.url }}');">
+    <div class="container">
+        <h1>{{ item.page_title}}</h1>
+        <!-- <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">About us minimal style</a></li>
+        </ul> -->
+    </div>
+</div>
+{% endfor %}
+<!-- Page Title END -->

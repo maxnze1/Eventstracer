@@ -1,0 +1,96 @@
+{% extends 'pages/base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form Column Start -->
+            <div class="col-md-12 col-sm-12 col-12 wow fadeIn animated mx-auto" data-wow-delay=".3s"
+                data-wow-duration="1.5s">
+                <div class="contact-form-md white-background">
+
+                    <ul class="default-links">
+                        <li>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }} | Payment</li>
+                    </ul>
+                    <!-- Form Start -->
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12 col-lg-8 mx-auto">
+                            <h4 class="center-holder">Select Circuit</h4>
+                            <div class="pricing-plan circuit-pay pricing-plan-emphasise center-holder">
+                                <form method="post" action="#" class="mt-30">
+                                    <script src="https://js.paystack.co/v1/inline.js"></script>
+                                    {% csrf_token %}
+                                    {{ wizard.management_form }}
+                                    {{ form|bootstrap }}
+                                    {% if wizard.steps.prev %}
+                                    <div class="mt-20 mb-40"><button type="button"
+                                            class="btn btn-danger mt-25 payment-button" id="pay">
+                                            Register
+                                            <span class="payment"></span></button></div>
+                                    <button formnovalidate="formnovalidate" class="primary-button button-sm"
+                                        name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}"> First
+                                    </button>
+                                    <button formnovalidate="formnovalidate" class="primary-button button-sm"
+                                        name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}"> Prev
+                                    </button>
+                                    {% endif %}
+                                    <button hidden type="submit" class="primary-button button-sm"
+                                        id="submit">Proceed</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Contact Form Column End -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    $(document).ready(function () {
+        $("#pay").on('click', function () {
+            var payment = $('#id_SME5-payment_type').val();
+            payWithPaystack(payment);
+        });
+        function payWithPaystack(payment) {
+            var handler = PaystackPop.setup({
+                key: 'pk_test_75454c82f2af7bd22ec3ed8b1060b52770aa9f7c',
+                email: '{{ email }}',
+                amount: parseInt(payment),
+                currency: "NGN",
+                ref: '' + "{{ reference }}",
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Mobile Number",
+                            variable_name: "mobile_number",
+                            value: "{{ phone }}"
+                        }, { display_name: "Payment For", variable_name: "payment_for", value: "sme registrations" }
+                    ]
+                },
+                callback: function (response) {
+                    console.log(response);
+                    if (response.status === "success") {
+                        $("#id_SME5-reference").val('{{ reference }}');
+                        $("#submit").click()
+                    } else {
+                        alert('Error. Payment failed', response)
+                    }
+                    alert('success. transaction ref is ' + response.reference);
+                },
+                onClose: function () {
+                    location.reload();
+                }
+            });
+            handler.openIframe();
+        }
+    });
+</script>
+{% endblock %}

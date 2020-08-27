@@ -1,0 +1,65 @@
+{% extends 'pages/base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form Column Start -->
+            <div class="col-md-12 col-sm-12 col-12 wow fadeIn animated" data-wow-delay=".3s" data-wow-duration="1.5s">
+                <div class="contact-form-md white-background">
+                    <h5 class="center-holder">Silverbird SME Circuit Registration Form</h5>
+                    <ul class="default-links">
+                        <li>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }} | Personal Information</li>
+                    </ul>
+                    <!-- Form Start -->
+                    <form method="post" action="#" class="mt-30" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ wizard.management_form }}
+                        {{ form|bootstrap }}
+                        <div class="form-group col-lg-4">
+                            <div class="col-12" id="image">
+                            </div>
+                        </div>
+                        {% if wizard.steps.prev %}
+                        <button formnovalidate="formnovalidate" class="primary-button button-sm" name="wizard_goto_step"
+                            type="submit" value="{{ wizard.steps.first }}"> First </button>
+                        <button formnovalidate="formnovalidate" class="primary-button button-sm" name="wizard_goto_step"
+                            type="submit" value="{{ wizard.steps.prev }}"> Prev </button>
+                        {% endif %}
+                        <button type="submit" class="primary-button button-sm">Proceed</button>
+                    </form>
+                    <!-- Form End -->
+                </div>
+            </div>
+            <!-- Contact Form Column End -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block extra_js %}
+<script>
+    var element = document.getElementById('image');
+
+    function readFile(input) {
+        element.innerHTML = "";
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var img = document.createElement("img");
+                img.src = e.target.result;
+                img.className = "img-responsive";
+                element.appendChild(img);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    var photoInput = document.getElementById('id_SME3-photo');
+    photoInput.addEventListener('change', function () {
+        readFile(this);
+    });
+
+</script>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% load crispy_forms_tags %}
+
+<div class="section-block-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-8 offset-2">
+                <div class="section-heading center-holder">
+                    <h3 class="semi-bold">Create Event</h3>
+                    <div class="section-heading-line"></div>
+                </div>
+
+                <div class="text-content-big">
+                    <div class="event-form-md white-background shadow-light">
+                        {% load bootstrap4 %}
+                        {% bootstrap_css %}
+                        {% bootstrap_javascript jquery='full' %}
+                        {{ form.media }}
+                        <form method="POST" enctype="multipart/form-data">
+                            <fieldset class="form-group">
+                                {% csrf_token %}
+                                {{ form.media }}
+                                {{ form|crispy }}
+                            </fieldset>
+                            <div class="form-group">
+                                <button class="btn btn-primary" type="submit">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

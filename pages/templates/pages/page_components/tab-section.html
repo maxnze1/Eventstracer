@@ -1,0 +1,163 @@
+<!-- Tabs Section START -->
+<div class="section-block">
+    <div class="container">
+        <div class="section-heading center-holder">
+            <h2 class="Inder"><span class="black ">Featured </span><span class="primary-color">Event</span> </h2>
+            <div class="section-heading-line"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-12">
+                <!-- Tabs Start -->
+                <div class="medium-icon-tabs-light">
+                    <div class='tabs tabs_animate mt-40'>
+                        <ul class="tab-menu center-holder">
+                            <!-- <li><a href="#tab-f-1"><i class="icon"></i>Flower Convention</a></li> -->
+                            <li><a href="#tab-f-2"><i class="icon"></i>Cake Delight</a></li>
+                            <li><a href="#tab-f-3"><i class="icon"></i>Pearls & Beads</a></li>
+                            <li><a href="#tab-f-4"><i class="icon"></i>Oil & Fragrance</a></li>
+                            <li><a href="#tab-f-6"><i class="icon"></i>Gifts & Wraps</a></li>
+                        </ul>
+
+                        {% for item in flower %}
+                        <!-- Tab 1 Start -->
+                        <!-- <div id='tab-f-1' class="clearfix tab-body">
+                            <div class="row mt-40">
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <img src="{{ item.image.url }}" alt="img">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="section-heading left-holder">
+                                        <h2 class="semi-bold">Lagos <span class="great-vibes primary-color">Flower
+                                            </span>
+                                            Convention</h2>
+                                        <div class="section-heading-line"></div>
+                                    </div>
+                                    <div class="text-content-big">
+                                        <p>{{ item.text|safe}}</p>
+                                    </div>
+                                    <div class="mt-15">
+                                        <a href="/registrations/sme-form" class="btn btn-primary"
+                                            role="button">Exhibitor</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %} -->
+                        <!-- Tab 1 End -->
+
+                        <!-- Tab 2 Start -->
+                        {% for item in cake %}
+                        <div id='tab-f-2' class="clearfix tab-body">
+                            <div class="row mt-40">
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <img src="{{item.image.url}}" alt="img">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="section-heading left-holder">
+                                        <h2 class="bold">{{ item.title }}</h2>
+                                        <div class="section-heading-line"></div>
+                                    </div>
+                                    <div class="text-content-big">
+                                        <p>{{ item.text|safe }}</p>
+                                    </div>
+                                    <div class="mt-15">
+                                        <a href="/registrations/sme-form" class="btn btn-primary"
+                                            role="button">Exhibitor</a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- Tab 2 End -->
+
+                        <!-- Tab 3 Start -->
+                        {% for item in beads %}
+                        <div id='tab-f-3' class="clearfix tab-body">
+                            <div class="row mt-40">
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <img src="{{item.image.url}}" alt="img">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="section-heading left-holder">
+                                        <h2 class="bold">{{ item.title }}</h2>
+                                        <div class="section-heading-line"></div>
+                                    </div>
+                                    <div class="text-content-big">
+                                        <p>{{ item.text|safe }}</p>
+                                    </div>
+                                    <div class="mt-15">
+                                        <a href="/registrations/sme-form" class="btn btn-primary"
+                                            role="button">Exhibitor</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- Tab 3 End -->
+
+                        <!-- Tab 4 Start -->
+                        {% for item in music %}
+                        <div id='tab-f-4' class="clearfix tab-body">
+                            <div class="row mt-40">
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <img src="{{item.image.url}}" alt="img">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="section-heading left-holder">
+                                        <h2 class="bold">{{ item.title }}</h2>
+                                        <div class="section-heading-line"></div>
+                                    </div>
+                                    <div class="text-content-big">
+                                        <p>{{ item.text|safe }}</p>
+                                    </div>
+                                    <div class="mt-15">
+                                        <a href="/registrations/sme-form" class="btn btn-primary"
+                                            role="button">Exhibitor</a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- Tab 4 End -->
+
+
+
+                        <!-- Tab 6 Start -->
+                        {% for item in gifts %}
+                        <div id='tab-f-6' class="clearfix tab-body">
+                            <div class="row mt-40">
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <img src="{{item.image.url}}" alt="img">
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="section-heading left-holder">
+                                        <h2 class="bold">{{ item.title }}</h2>
+                                        <div class="section-heading-line"></div>
+                                    </div>
+                                    <div class="text-content-big">
+                                        <p>{{ item.text|safe }}</p>
+                                    </div>
+                                    <div class="mt-15">
+                                        <a href="/registrations/sme-form" class="btn btn-primary"
+                                            role="button">Exhibitor</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- Tab 6 End -->
+                    </div>
+                </div>
+                <!-- Tabs End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tabs Section END -->

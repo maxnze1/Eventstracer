@@ -1,0 +1,31 @@
+{% load banner_tags wagtailcore_tags wagtailimages_tags %}
+{% get_banners 'home-page-banner' as slides %}
+
+
+{% for slide in slides.banner.all %}
+{% image slide.image fill-1440x500 as img %}
+<div class="swiper-slide" style="background-image:url('{{img.url}}');">
+    <div class="container">
+        <!-- <div class="slider-content center-holder">
+            <h3 class="extra-light animated fadeInDown">{{ slide.title}} <span class="primary-color">We Will
+                    Help</span></h3>
+            <h2 class="light animated fadeInDown">{{ slide.text|richtext}}</h2>
+            <h5 class="animated fadeInUp">Digitally forward creative. Connected creativity. We are intelligence
+                in action. Innovate. Inspire.</h5>
+            <div class="animated fadeInUp mt-30">
+                <a href="#" class="primary-button semi-rounded button-md w-200">Purchase Now</a>
+                <a href="#" class="white-button-bordered semi-rounded button-md w-200">Learn More</a>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+{% endfor %}
+
+</div>
+<!-- Add Arrows -->
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<!-- Add Pagination -->
+<div class="swiper-pagination"></div>
+</div>

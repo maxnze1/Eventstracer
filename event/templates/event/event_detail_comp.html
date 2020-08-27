@@ -1,0 +1,178 @@
+{% load static %}
+{% load events_tags %}
+
+<!-- Blog Post START -->
+<div>
+    <div class="container">
+        <div class="row">
+            <!-- Left Side START -->
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="blog-post">
+                    <h2 class="mt-30 mb-30">{{event.title}}</h2>
+                    <img src="{{ event.image.url}}" alt="img" class="mb-15">
+
+                    <ul class="blog-post-info">
+                        <!-- <li><i class="far fa-user"></i><span>Admin</span></li> -->
+                        <li><i class="far fa-calendar-alt"></i><span>{{ event.start_date}}</span></li>
+                    </ul>
+                    <p>{{ event.description|safe}}</p>
+
+                </div>
+                <div class="row" style="min-height: 500px">
+                    <div class="col-12">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                {% if event.author == user %}
+                <a href="{% url 'events:events-update' slug %}" class="btn btn-primary" role="button">update</a>
+                <a href="{% url 'events:events-delete' slug %}" class="btn btn-outline-danger" role="button">delete</a>
+                {% endif %}
+            </div>
+            <!-- Left Side END -->
+
+            <!-- Right Side START -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="blog-post-right">
+
+                    <div class="recent-post  mt-130">
+                        <div class="mb-100">
+                            <div class="recent-post-info">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-12 pr-0">
+                                        <div class="mb-30">
+                                            {% if interested %}
+                                            <a href="{% url 'events:interested' slug False %}"
+                                                class="btn btn-primary">No longer Interested</a>
+                                            {% else %}
+                                            <a href="{% url 'events:interested' slug True %}" class="btn btn-primary">I
+                                                am Interested</a>
+                                            {% endif %}
+                                            {% if attending %}
+                                            <a href="{% url 'events:attending' slug False %}" class="btn btn-success">No
+                                                longer attending</a>
+                                            {% else %}
+                                            <a href="{% url 'events:attending' slug True %}" class="btn btn-success">I
+                                                am attending</a>
+                                            {% endif %}
+                                        </div>
+                                        <h5>Date:</h5>
+                                        <h5>{{ event.start_date}}</h5>
+                                        <h5>{{ event.end_date}}</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="recent-post-info">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-12 pr-0">
+                                        <h6>Address:</h6>
+                                        <h6>{{ event.address}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recent-post-info">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-12 pr-0">
+                                        <h6>Organizer:</h6>
+                                        <h6>{{ event.organizer}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-30">
+                                {% if event.id|expire_status %}
+                                {% if event.amount %}
+                                {% if not ticket_status %}
+                                <form method="post" action="#" class="">
+                                    <script src="https://js.paystack.co/v1/inline.js"></script>
+                                    {% csrf_token %}
+                                    <input hidden type="text" name="reference" value="{{ reference }}">
+                                    <a href="{% if request.user.is_authenticated %}#{% else %}{% url 'account_login' %}{% endif %}"
+                                        id="pay" class="btn btn-primary full-width semi-rounded">Get Ticket -
+                                        N{{ event.amount }}</a>
+                                    <button hidden type="submit" class="primary-button button-sm"
+                                        id="submit">Proceed</button>
+                                </form>
+                                {% else %}
+                                <a href="#" style="pointer-events: none; background-color: gray" id="pay"
+                                    class="btn btn-danger full-width semi-rounded">Ticket Bought</a>
+                                {% endif %}
+                                {% else %}
+                                <button disabled class="btn btn-danger full-width semi-rounded">Free</button>
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                            <div class="mt-40">
+                                <h6><span>{{ stats.attending__count }}</span> - Attending</h6>
+                                <h6><span>{{ stats.interest__count }}</span> - Interested</h6>
+                            </div>
+                        </div>
+
+
+                        <h4>Similar Events</h4>
+                        <div class="recent-post-info">
+                            {% for evt in similar_events %}
+                            <div class="row mb-40">
+
+                                <div class="col-md-4 col-sm-4 col-12 pr-0">
+                                    <img src="{{evt.image.url}}" alt="img">
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-12">
+                                    <h3><a href="{{event.get_absolute_url}}">{{ evt.title}}</a></h3>
+                                    <h6>{{ event.start_date}}</h6>
+                                </div>
+
+                            </div>
+                            {% endfor %}
+                        </div>
+
+
+                        <!-- <h4>Categories</h4>
+                        <div class="blog-post-categories mt-20">
+                            <ul>
+                                <li><a href="#">Business<span>25</span></a></li>
+                                <li><a href="#">Resources<span>06</span></a></li>
+                                <li><a href="#">Life Style<span>09</span></a></li>
+                                <li><a href="#">Graphic Design<span>10</span></a></li>
+                                <li><a href="#">Web Designer<span>36</span></a></li>
+                                <li><a href="#">User Interface<span>17</span></a></li>
+                                <li><a href="#">Right Style<span>09</span></a></li>
+                                <li><a href="#">Videos<span>06</span></a></li>
+                            </ul>
+                        </div> -->
+
+
+
+                        <!-- <h4>Tags</h4>
+                        <div class="recent-post-tags mt-20">
+                            <a href="#" class="dark-button button-tag semi-rounded">Business</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Design</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Deweloper</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Design</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Business</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Design</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Deweloper</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Business</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Design</a>
+                            <a href="#" class="dark-button button-tag semi-rounded">Design</a>
+                        </div> -->
+
+                        <h4>Share</h4>
+                        <div class="blog-post-follow mt-20">
+                            <ul>
+                                <li class="social-facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                <li class="social-youtube"><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                                <li class="social-twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                                <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest-square"></i></a>
+                                </li>
+                                <li class="social-behance"><a href="#"><i class="fab fa-behance-square"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Side END -->
+            </div>
+        </div>
+    </div>
+    <!-- Blog Post END -->

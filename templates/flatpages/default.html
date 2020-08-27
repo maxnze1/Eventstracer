@@ -1,0 +1,18 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load flatpages %}
+{% block content %}
+
+
+<div class="collapse navbar-collapse" id="menu">
+    {% get_flatpages as flatpages %}
+    <ul class="nav navbar-nav">
+        {% for page in flatpages %}
+        <li><a href="/pages{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="container">
+    {{ flatpage.content }}
+</div>
+{% endblock content %}

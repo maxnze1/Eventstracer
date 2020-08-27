@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/paystack/css/style.css">
+    <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+    <form action="/process" method="POST" >
+  <script
+    src="https://js.paystack.co/v1/inline.js"
+    data-key="pk_test_221221122121"
+    data-email="customer@email.com"
+    data-amount="10000"
+    data-ref='<UNIQUE TRANSACTION REFERENCE>'
+  >
+  </script>
+</form>
+</body>
+
+
+<script src="/static/js/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+</html>

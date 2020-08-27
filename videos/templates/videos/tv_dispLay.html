@@ -1,0 +1,16 @@
+{% for item in event_tv %}
+<div class="section-block pt-0 pb-0 mt-35">
+    <div class="container">
+        <h2 class="semi-bold center-holder">Event TV</h2>
+        <div class="row">
+            <div class="col-12 col-md-11 col-sm-12">
+                <video width="100%" autoplay height="650" controlsList="nodownload" webkitallowfullscreen
+                    mozallowfullscreen allowfullscreen>
+                    <source src="{{ item.video_url}}" type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

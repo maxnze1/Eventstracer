@@ -1,0 +1,5 @@
+<ul class="footer-style-1-latest-news">
+    {% for item in top_news %}
+    <li><a href="{{ item.get_absolute_url }}">{{item.title}}</a></li>
+    {% endfor %}
+</ul>

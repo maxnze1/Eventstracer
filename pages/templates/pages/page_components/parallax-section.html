@@ -1,0 +1,15 @@
+{% for item in cta %}
+<div class="section-block-parallax jarallax black-overlay-20" data-jarallax data-speed="0.6"
+    style="background-image: url('{{item.background.url}}');">
+    <div class="container">
+        <div class="large-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
+            <h2 class="white-color">{{ item.title }}</h2>
+            <div class="section-heading-line"></div>
+        </div>
+        <div class="mt-25 center-holder wow fadeIn animated" data-wow-delay=".2s">
+            <a href="#" class="white-button button-md">{{ item.button_title }}</a>
+        </div>
+    </div>
+</div>
+
+{% endfor %}

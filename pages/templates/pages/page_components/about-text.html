@@ -1,0 +1,28 @@
+{% for item in about_data %}
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+                       <div class="col-md-6 col-sm-12 col-6">
+
+                <div class="section-heading center-holder">
+                    <img src="{{ item.image.url }}" alt="img">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-6">
+                <!-- <div class="section-heading center-holder">
+                 <small>We're thinking big</small>
+                <h2 class="bold">Meet The Event <span class="italic libre-baskerville">Experience
+                    </span><br>Experts</h2>
+                <div class="section-heading-line"></div>
+            </div> -->
+
+                <div class="text-content-big mt-25">
+                    <p>{{ item.text|safe}}</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endfor %}

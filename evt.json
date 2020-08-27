@@ -1,0 +1,1 @@
+[{"model": "newsletter.newsletter", "pk": 1, "fields": {"title": "Eventstracer Newsletter", "slug": "eventstracer-newsletter", "email": "info@eventstracer.com", "sender": "Eventstracer", "visible": true, "send_html": true, "site": [3]}}]

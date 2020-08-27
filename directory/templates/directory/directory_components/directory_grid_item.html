@@ -1,0 +1,139 @@
+{% load ratings %}
+{% load thumbnail %}
+{% load directory_tags %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12 mt-100">
+            <div class="blog-post-categories mt-20">
+                <h5 class="semi-bold">Categories</h5>
+                <ul>
+                    <li{% if not category %} class="selected" {% endif %}>
+                        <a href="{% url 'directory:directory' %}">All</a>
+                        </li>
+
+                        <li>{% d_category %}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9 col-sm-9 col-xs-12">
+
+            {% if tag %}
+            <h3>{{tag.name}} Events</h3>
+            {% endif %}
+            <h3 class="mt-30">{% if category %}{{ category.name }} Directory{% else %}Diretories{% endif %}</h3>
+            {% include 'directory/directory_components/search_form.html' %}
+            <div class="col-md-12 col-sm-12">
+                {% for item in directories %}
+                <div id="directory" class="blog-news mb-20">
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div id="directory" class="blog-news-left-img">
+
+                                {% thumbnail item.company_logo "300x220" crop="center" as im %}
+                                <a href="{{ item.get_absolute_url }}"> <img src="{{ im.url }}" width="{{ im.width }}"
+                                        height="{{ im.height }}"></a>
+                                {% endthumbnail %}
+                                <!-- <img src="{{ item.company_logo.url }}" /> -->
+
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="blog-news-left-text">
+
+                                <h4><a href="{{ item.get_absolute_url }}">{{ item.business_name}}</a>
+                                </h4>
+                                <p>{{ item.track_record|safe|truncatewords:12|linebreaks}}</p>
+                                <div class="blog-news-left-text">
+                                    <ul class="primary-list">
+                                        <li><i class="fas fa-map-marker-alt"></i> {{ item.state}}</li>
+                                        <li><i class="fas fa-mobile-alt"></i> {{ item.phone_number}}</li>
+                                        <li><i class="fas fa-envelope"></i> {{ item.email}}</li>
+                                    </ul>
+                                </div>
+                                <div class="flex-container mb-10">
+                                    <div>
+                                        {% for tag in item.tags.all %}
+                                        <p> {{ tag.name}}</p>
+
+                                        {% if not forloop.last %}, {% endif %}
+                                        {% endfor%}
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- Pagination Start -->
+        <div class="container center-holder mb-30">
+            <div class="">
+                {% if is_paginated %}
+                {% if page_obj.has_previous %}
+                <a class="grey-button button-pagination semi-rounded" href="?{% param_replace page=1 %}">First</a>
+                {% if page_obj.previous_page_number != 1 %}
+                <a class="grey-button-bordered button-pagination semi-rounded"
+                    href="?{% param_replace page=page_obj.previous_page_number %}">Previous</a>
+                {% endif %}
+                {% endif %}
+
+                {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                <a href="?{% param_replace page=page_obj.num  %}"
+                    class="primary-button button-pagination semi-rounded">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-5' and num  < page_obj.number|add:'5' %}
+                <a href="?page={{ num }}" class="grey-button-bordered button-pagination semi-rounded">{{ num }}</a>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                {% if page_obj.next_page_number != paginator.num_pages %}
+                <a class="grey-button button-pagination semi-rounded"
+                    href="?{% param_replace page=page_obj.next_page_number %}">Next</a>
+                {% endif %}
+                <a class="grey-button-bordered button-pagination semi-rounded"
+                    href="?{% param_replace page=paginator.num_pages %}">Last</a>
+                {% endif %}
+
+                {% endif %}
+            </div>
+        </div>
+        <!-- <div class="container center-holder mb-30">
+            <div class="">
+                {% if directories.has_other_pages %}
+                {% if directories.has_previous %}
+                <a href="?page=1" class="grey-button button-pagination semi-rounded">First</a>
+                <a href="?page={{ directories.previous_page_number}}"
+                    class="grey-button-bordered button-pagination semi-rounded">Previous</a>
+                {% endif %}
+                {% for num in directories.paginator.page_range %}
+                {% if directories.number == num %}
+                <a href="?page={{ num }}" class="primary-button button-pagination semi-rounded">{{ num }}</a>
+                {% elif num > dp.number|add:'-3' and num  < directories.number|add:'3' %}
+                <a href="?page={{ num }}" class="grey-button-bordered button-pagination semi-rounded">{{ num }}</a>
+                {% endif %}
+                {% endfor %}
+
+                {% if dp.has_next %}
+                <a href="?page={{directories.next_page_number}}"
+                    class="grey-button button-pagination semi-rounded">Next</a>
+                <a href="?page={{ directories.paginator.num_pages}}"
+                    class="grey-button-bordered button-pagination semi-rounded">Last</a>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div> -->
+        <!-- Pagination End -->
+    </div>
+</div>

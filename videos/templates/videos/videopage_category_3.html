@@ -1,0 +1,33 @@
+{% load evt_tags wagtailcore_tags wagtailimages_tags %}
+
+<!-- Video Boxes Section START -->
+<div class="section-block-30">
+    <div class="container">
+        <div class="small-heading center-holder mb-20">
+            <span class="uppercase">Category 3</span>
+        </div>
+        <div class="row">
+            {% get_videobox 'video-page-category-3' as videos %}
+            {% for items in videos.video_box.all %}
+            {% image items.image fill-360x240 as img %}
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="video-video-box full-width mt-20">
+                    <img src="{{ img.url}}" class="extra-rounded-border shadow-primary" alt="img">
+                    <div class="video-video-box-overlay">
+                        <div class="video-video-box-button-xs">
+                            <button class="video-video-play-icon" data-izimodal-open="#video1">
+                                <i class="fa fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Start -->
+                <div class="izimodal" id="video1" data-iziModal-width="800px" data-iziModal-fullscreen="true">
+                    <iframe height="415" src="{{ items.video}}" class="full-width shadow-primary"></iframe>
+                </div>
+                <!-- Modal End -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+{% load evt_tags wagtailcore_tags wagtailimages_tags %}
+
+{% get_section 'service-section' as servicesection %}
+
+{% for items in servicesection.section.all %}
+{% image items.image fill-296x289 as img %}
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-12">
+                <div class="section-heading left-holder wow fadeIn animated" data-wow-delay=".1s">
+                    <h3 class="bold">You Can Take <span class="italic libre-baskerville primary-color">Your
+                            Business</span> from Good to Great</h3>
+                    <div class="section-heading-line"></div>
+                </div>
+                <div class="text-content wow fadeIn animated" data-wow-delay=".15s">
+                    <p>{{ items.text|richtext}}</p>
+                </div>
+                <div class="mt-15 wow fadeIn animated" data-wow-delay=".2s">
+                    <a href="{{items.link_page}}" class="button-md primary-button">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-12 col-12">
+                <div class="row pl-30-md">
+                    <div class="col-md-6 col-sm-6 col-12 wow fadeIn animated" data-wow-delay=".1s"
+                        data-wow-duration="1.5s">
+                        <div class="service-overlay">
+                            <img src="{{img.url}}" alt="img">
+                            <div class="service-overlay-box center-holder">
+                                <h4>Investment Advisor</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-12 wow fadeIn animated" data-wow-delay=".15s"
+                        data-wow-duration="1.5s">
+                        <div class="service-overlay">
+                            <img src="http://via.placeholder.com/296x289" alt="img">
+                            <div class="service-overlay-box center-holder">
+                                <h4>Staffing Consultant</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                <a href="{{items.link_page}}">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,85 @@
+{% load static %}
+{% load thumbnail %}
+
+<!-- Blog Post START -->
+<div>
+    <div class="container">
+        <div class="row">
+            <!-- Left Side START -->
+            <div class="col-md-8 col-sm-12 col-xs-12 mt-40">
+                {% if directory.author == user %}
+                <div class="mb-10"><a href="{{ directory.get_update_link }}" class="btn btn-primary"
+                        role="button">Edit</a>
+                </div>
+                {% endif %}
+                <div class="blog-post">
+                    {% thumbnail directory.product_image "700x300" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                    {% endthumbnail %}
+                    <h2 class="mt-30">{{ directory.business_name}}</h2>
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <p>{{ directory.track_record|safe}}</p>
+                        </div>
+                        <div class="col-md-4 col-sm-7">
+                            <div>
+                                <ul class="primary-list">
+                                    <li><i class="fas fa-map-marker-alt"></i> {{ directory.state}}</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> {{ directory.city}}</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> {{ directory.business_address}}</li>
+                                    <li><i class="fas fa-mobile-alt"></i> {{ directory.phone_number}}</li>
+                                    <li><i class="fas fa-envelope"></i> {{ directory.email}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- Left Side END -->
+
+            <!-- Right Side START -->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="blog-post-right">
+                    <h4>Similar Businesses</h4>
+                    <div class="recent-post-info">
+                        {% for evt in similar_events %}
+                        <div class="row mb-40">
+
+                            <div class="col-md-4 col-sm-4 col-12 pr-0">
+                                <img src="{{evt.image.url}}" alt="img">
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-12">
+                                <h3><a href="{{event.get_absolute_url}}">{{ evt.title}}</a></h3>
+                                <h6>{{ event.start_date}}</h6>
+                            </div>
+
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h4>Share</h4>
+                    <div class="blog-post-follow mt-20">
+                        <ul>
+                            <li class="social-facebook"><a href="#"><i class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li class="social-youtube"><a href="#"><i class="fab fa-youtube-square"></i></a>
+                            </li>
+                            <li class="social-twitter"><a href="#"><i class="fab fa-twitter-square"></i></a>
+                            </li>
+                            <li class="social-pinterest"><a href="#"><i class="fab fa-pinterest-square"></i></a>
+                            </li>
+                            <li class="social-behance"><a href="#"><i class="fab fa-behance-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Side END -->
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- Blog Post END -->

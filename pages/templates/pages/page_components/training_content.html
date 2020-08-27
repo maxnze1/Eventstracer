@@ -1,0 +1,79 @@
+<!-- Callback Section START -->
+{% load crispy_forms_tags %}
+
+
+{% for item in queryset %}
+<div class="page-title jarallax black-overlay-20" data-jarallax data-speed="0.6"
+    style="background-image: url('{{ item.page_banner.url }}');">
+    <div class="container">
+        <h1>{{ item.page_title}}</h1>
+        <!-- <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">About us minimal style</a></li>
+        </ul> -->
+    </div>
+</div>
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-8 offset-2">
+                <div class="section-heading center-holder">
+                    <h3 class="semi-bold">{{ item.content_title }}</h3>
+                    <div class="section-heading-line"></div>
+                </div>
+
+                <div class="text-content-big">
+                    <div class="django-form-md white-background shadow-light">
+                        <!-- Form Start -->
+                         {% if sent %}
+                        <p>Thank you for requesting for one of our training program. A training representative will
+                            contact you shortly.”
+                        </p>
+                        {% else %}
+                        <!-- Form Start -->
+                        <form method="POST" class="white-form mt-20">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                    {{ training_form.surname|as_crispy_field }}
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                    {{ training_form.firstname|as_crispy_field }}
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                    {{ training_form.email|as_crispy_field }}
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                    {{ training_form.phone_number|as_crispy_field }}
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                    {{ training_form.company_name|as_crispy_field }}
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                    {{ training_form.company_email|as_crispy_field }}
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 col-12">
+                                    {{ training_form.company_address|as_crispy_field }}
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 col-12">
+                                    {{ training_form.training|as_crispy_field }}
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="button-sm primary-button semi-rounded full-width">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </form>
+                        {% endif %}
+                        <!-- Form End -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<!-- Callback Section END -->

@@ -1,0 +1,40 @@
+{% for item in welcome %}
+<!-- Video Box Section START -->
+<div class="section-block-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="pl-45-md">
+                    <div class="section-heading left-holder mt-60">
+                        <h3 class="Inder semi-bold"><span class="black">Meet The </span>
+<span class="primary-color">
+                                Experience</span><span class="black"> Experts</span></h3>
+                        <div class="section-heading-line"></div>
+                    </div>
+                    <div class="text-content">
+                        <p>{{ item.text|safe}}</p>
+                    </div>
+                    <div class="mt-15">
+                        <a href="{{item.linked_page}}" class="primary-button button-sm">{{ item.button_text}}</a>
+                    </div>
+                </div>
+
+                <!-- Modal Start -->
+
+                <!-- Modal End -->
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="video-video-box full-width" id="video-player">
+                    <video style="width:100%, height:100%" controls controlsList="nodownload" webkitallowfullscreen
+                        mozallowfullscreen allowfullscreen>
+                        <source src="{{ item.evt_video}}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+<!-- Video Box Section END -->

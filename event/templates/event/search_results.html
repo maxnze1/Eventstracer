@@ -1,0 +1,42 @@
+{% if events %}
+<div class="recent-post-info left-holder">
+    {% for evt in events %}
+    <div class="row mb-10">
+
+        <div class="col-md-2 col-sm-2 pr-0">
+            <img src="{{evt.image.url}}" alt="img">
+        </div>
+        <div class="col-md-10 col-sm-10">
+            <p><a href="/events/events/{{ evt.slug }}">{{ evt.title|truncatewords:20 }}</a></p>
+            <p>{{ event.start_date}}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+
+
+{% if location %}
+<div class="recent-post-info left-holder">
+    {% for evt in events %}
+    <div class="row mb-10">
+
+        <div class="col-md-2 col-sm-2 pr-0">
+            <img src="{{evt.image.url}}" alt="img">
+        </div>
+        <div class="col-md-10 col-sm-10">
+            <p><a href="/events/events/{{ evt.slug }}">{{ evt.title|truncatewords:20 }}</a></p>
+            <p>{{ event.start_date}}</p>
+        </div>
+
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+
+<!-- {% for item in news %}
+<li><a a href="/news/news/{{ item.slug }}">{{ item.title }}</a></li>
+{% endfor %} -->
+
+<!-- Form End -->

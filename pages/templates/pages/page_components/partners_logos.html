@@ -1,0 +1,16 @@
+<div class="section-block-grey section-sm">
+    <div class="container">
+        <div class="center-holder mb-20">
+                        <h2 class="Inder"><span class="black ">Our </span><span class="primary-color">Partners</span></h2>
+
+        </div>
+
+        <div class="owl-carousel owl-theme clients" id="clients">
+            {% for item in logos %}
+            <div class="item">
+                <img src="{{ item.logo_image.url }}" alt="img">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

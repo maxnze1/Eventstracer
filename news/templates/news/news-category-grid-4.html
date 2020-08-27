@@ -1,0 +1,39 @@
+<!-- Blog Grid Section START -->
+<div class="section-block-grey">
+    <div class="container">
+
+        <div class="row">
+            {% for evt in events %}
+
+            <div class="col-md-3 col-sm-6 col-12 wow fadeIn animated" data-wow-delay=".1s">
+                <div class="blog-grid-3">
+                    <div class="blog-grid-3-img">
+                        <img src="{{ evt.image.url}}" alt="img">
+                    </div>
+                    <div class="blog-grid-3-text">
+                        <h4><a href="{{ evt.get_absolute_url }}">{{ evt.title|truncatewords:3|linebreaks}}</a></h4>
+                        <ul>
+                            <li><i class="fa fa-calendar"></i>{{ evt.start_date|date:"F d, Y"}}</li>
+                            <!-- <li><i class="fas fa-user"></i>By admin</li> -->
+                        </ul>
+                        {{ evt.address|truncatewords:6|linebreaks}}
+                        <div class="blog-grid-3-button left-holder">
+                            <a href="#">{{ evt.category}} <i class=""></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="mt-30 center-holder">
+            <a href="#" class="grey-button button-pagination semi-rounded">1</a>
+            <a href="#" class="grey-button-bordered button-pagination semi-rounded">2</a>
+            <a href="#" class="grey-button-bordered button-pagination semi-rounded">3</a>
+            <a href="#" class="grey-button-bordered button-pagination semi-rounded"><i
+                    class="fas fa-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Blog Grid Section END -->

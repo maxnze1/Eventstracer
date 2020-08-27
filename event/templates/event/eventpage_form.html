@@ -1,0 +1,21 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'event/event_form.html' %}
+
+
+{% endblock content %}
+
+{% block extra_js %}
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEtywbh0b6n4-jHcPWpdXYedd3JnockrY&libraries=places"></script>
+<script>
+    autocomp = new google.maps.places.Autocomplete(document.getElementById('id_location'),
+        {
+            types: ['geocode'],
+            componentRestrictions: { country: "ng" }
+        });
+</script>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% load static %}
+<div class="col-md-12 col-sm-6 col-12 mt-500">
+    <div>
+        <div class="spacer-500"></div>
+        <button class="primary-button button-lg" data-izimodal-open="#modal5">
+            Register Now
+        </button>
+        <!-- Modal Start -->
+        <div class="izimodal" id="modal5" data-iziModal-width="1000px" data-iziModal-fullscreen="true"
+            data-iziModal-transitionIn="comingIn">
+            <!-- Close Button Start -->
+            <div class="close-modal">
+                <button class="close-modal" data-izimodal-close><i class="ti-close"></i></button>
+            </div>
+            <!-- Close Button Start -->
+            <!-- Modal Body Start -->
+            <div class="modal-inside row no-gutters">
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="full-background" style="background-image: url({% static 'img/android-phone.png' %});">
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8 col-12">
+                    <div class="inner-30">
+                        <!-- Form Start -->
+                        <iframe width="600" height="500"
+                            src="https://cdn.forms-content.sg-form.com/bb13b5c8-b90b-11e9-a7ff-a6b14c1e9127"></iframe>
+                        <!-- Form End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Body End -->
+        </div>
+        <!-- Modal End -->
+    </div>
+</div>
+<!-- Contact Form Modal End -->

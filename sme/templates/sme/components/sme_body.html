@@ -1,0 +1,31 @@
+{% for item in sme %}
+
+<div class="section-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-12">
+                <img src="{{ item.content_image.url}}" alt="img">
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="pl-45-md">
+                    <div class="section-heading left-holder">
+                        <h3 class="bold">{{ item.content_title }}</h3>
+                        <div class="section-heading-line"></div>
+                    </div>
+                    <div class="text-content">
+                        <p>{{ item.body|safe }}</p>
+                    </div>
+
+                    <div class="mt-30">
+                        {% include 'sme/components/wide_button.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endfor %}

@@ -1,0 +1,108 @@
+{% load static %}
+{% load news_tags %}
+<!-- Footer START -->
+<footer class="footer-style-1">
+    <div class="container">
+        <div class="row">
+            <!-- Column 1 Start -->
+            <div class="col-md-4 col-sm-6 col-12">
+                <h3 class="Inder">About Us</h3>
+                <!-- <a href="#"><img src="{% static 'img/logos/logo.png' %}" alt="img"></a> -->
+
+                <div class="mt-20">
+                    <p>As “Experience Experts”, Eventstracer.com is a digital platform that is committed to
+                        promoting the business of “eventing” for the benefit of the several small businesses that depend
+                        on the event industry to promote their enterprise.
+                    </p>
+                </div>
+
+            </div>
+            <!-- Column 1 End -->
+
+            <!-- Column 2 Start -->
+            <div class="col-md-3 col-sm-6 col-12">
+                <h3 class="Inder">Latest News</h3>
+                <ul class="footer-style-1-latest-news">
+                    {% top_news %}
+                </ul>
+            </div>
+            <!-- Column 2 End -->
+
+            <!-- Column 3 Start -->
+            <div class="col-md-3 col-sm-6 col-12 ">
+                <h3 class="Inder">Contact Info</h3>
+                <ul class="footer-style-1-contact-info">
+                    <li><i class="fa fa-phone"></i> <span>+234 0809 500 8000</span></li>
+                    <li><i class="fa fa-envelope-open"></i> <span>info@eventstracer.com</span></li>
+
+                    </li>
+                </ul>
+            </div>
+            <!-- Column 3 End -->
+
+            <!-- Column 4 Start -->
+            <div class="col-md-2 col-sm-6 col-12">
+                <h3 class="Inder">Links</h3>
+                <ul class="footer-style-1-links">
+                    <li><a href="/pages/policy">Privacy Policy</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Advisory</a></li>
+                    <li><a href="#">Directory</a></li>
+                </ul>
+            </div>
+            <!-- Column 4 End -->
+        </div>
+    </div>
+
+    <div class="footer-style-1-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-12 text-center">
+                    <h5>Eventstracer © 2019. All Rights Reserved.</h5>
+                </div>
+
+                <!-- <div class="col-md-6 col-sm-6 col-12">
+                    <ul class="footer-style-1-bar-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer END -->
+
+
+
+
+
+
+<!-- Scroll to top button Start -->
+<a href="#" class="scroll-to-top"><i class="fas fa-chevron-up"></i></a>
+<!-- Scroll to top button End -->
+
+
+
+<!-- Jquery -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+
+<script src="{% static 'js/custom_search.js' %}"></script>
+<!-- SME JS -->
+<script src="{% static 'js/sme_jquery.steps.js' %}"></script>
+
+<script src="{% static 'js/sme_main.js' %}"></script>
+
+<!-- Plugins JS-->
+<script src="{% static 'js/plugins.js' %}"></script>
+
+<!-- Navbar JS -->
+<script src="{% static 'js/navigation.js' %}"></script>
+<script src="{% static 'js/navigation.fixed.js' %}"></script>
+
+<!-- Google Map -->
+<script src="{% static 'js/map.js' %}"></script>
+
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}"></script>

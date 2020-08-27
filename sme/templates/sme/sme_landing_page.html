@@ -1,0 +1,44 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'sme/components/page-title-banner.html' %}
+{% for item in page_data %}
+<div class="section-block">
+    <div class="container">
+
+        <div class="section-heading wow fadeIn animated" data-wow-delay=".1s">
+
+            <h3 class="light center-holder">{{ item.content_title }}</h3>
+            <div class="section-heading-line"></div>
+            <p>{{ item.body|safe }}</p>
+        </div>
+
+        {% endfor %}
+
+        <div class="row">
+            <div class="section-block pt-0">
+                <div class="container">
+                    <div class="small-heading center-holder mb-50">
+                        <h4 class="uppercase">Upcoming SME Circuit</h4>
+                    </div>
+
+                    <div class="row center-holder">
+                        {% for item in thumbnail %}
+                        <div class="col-md-3 col-sm-6 col-12 mb-50">
+                            <a href="{{ item.linked_page }}">
+                                <img src="{{ item.image.url }}" class="rounded-border shadow-extra-light" alt="img">
+                                <h6 class="mt-30">{{ item.title }}</h6>
+                        </div>
+                        </a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
